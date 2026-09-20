@@ -1,0 +1,13 @@
+---
+description: IE313 Course Rules and Multi-Agent Invariants
+globs: ["src/**/*.py", "notebooks/**/*.ipynb", "tests/**/*.py"]
+alwaysApply: true
+---
+# IE313 Course Operational Rules (UIT - VNU-HCM)
+- Reference: AGENTS.md and CLAUDE.md.
+- Strict Matplotlib OO API: Always use `fig, ax = plt.subplots()`. Reject `plt.plot()`, `plt.title()`, `plt.xlabel()`.
+- Vietnamese Font Rendering: Configure `plt.rcParams['font.sans-serif'] = ['DejaVu Sans', 'Liberation Sans', 'Arial']`.
+- Data Leakage Prevention: Transformers and scalers must reside inside `sklearn.pipeline.Pipeline`.
+- Reproducibility: Always pass `random_state=42` in `train_test_split`, `KFold`, and stochastic estimators.
+- Raw Data Immutability: NEVER modify or write to `datasets/raw/**`.
+- Language Boundary: English for identifiers and code; Vietnamese for docstrings, markdown explanations, and axis/chart labels.
