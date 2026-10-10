@@ -23,3 +23,7 @@ htmlcov/
 
 # Ruff
 .ruff_cache/
+
+# Claude
+.claude/settings.json
+
