@@ -27,9 +27,9 @@
       "Bash(python3 -c \"import pandas; print\\(pandas.__file__\\)\")",
       "Bash(echo \"EXIT_CODE: $?\")",
       "Read(//tmp/**)",
-      "Bash(.venv/bin/python -c ' *)"
+      "Bash(.venv/bin/python -c ' *)",
+      "Bash(git status *)"
     ],
-    "defaultMode": "bypassPermissions",
-    "disableAutoMode": "disable"
+    "defaultMode": "bypassPermissions"
   }
 }
