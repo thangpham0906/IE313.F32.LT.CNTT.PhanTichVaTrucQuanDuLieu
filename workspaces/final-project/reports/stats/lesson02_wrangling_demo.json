@@ -1,0 +1,109 @@
+{
+  "status": "DEMONSTRATION_ONLY_NO_DATA_LEAKAGE",
+  "scaling_summary": {
+    "original_accommodates": {
+      "count": 28987.0,
+      "mean": 3.0936,
+      "std": 2.2403,
+      "min": 1.0,
+      "25%": 2.0,
+      "50%": 2.0,
+      "75%": 4.0,
+      "max": 16.0
+    },
+    "simple_feature_scaling": {
+      "count": 28987.0,
+      "mean": 0.1934,
+      "std": 0.14,
+      "min": 0.0625,
+      "25%": 0.125,
+      "50%": 0.125,
+      "75%": 0.25,
+      "max": 1.0
+    },
+    "min_max_scaling": {
+      "count": 28987.0,
+      "mean": 0.1396,
+      "std": 0.1493,
+      "min": 0.0,
+      "25%": 0.0667,
+      "50%": 0.0667,
+      "75%": 0.2,
+      "max": 1.0
+    },
+    "z_score_standardization": {
+      "count": 28987.0,
+      "mean": -0.0,
+      "std": 1.0,
+      "min": -0.9345,
+      "25%": -0.4882,
+      "50%": -0.4882,
+      "75%": 0.4046,
+      "max": 5.7611
+    }
+  },
+  "binning_summary": {
+    "equal_width_bins_edges": [
+      1.0,
+      440085.6666666667,
+      880170.3333333334,
+      1320255.0
+    ],
+    "equal_width_counts": {
+      "Low": 28980,
+      "High": 7,
+      "Medium": 0
+    },
+    "quantile_bins_edges": [
+      1.0,
+      1209.65,
+      2099.5,
+      1320255.0
+    ],
+    "quantile_counts": {
+      "Low": 9664,
+      "Medium": 9662,
+      "High": 9661
+    },
+    "quantile_method_scope": "MỞ RỘNG NGOÀI BÀI HỌC; EDA_ONLY",
+    "pedagogical_lesson": "Khoảng đều mô tả chiều rộng giá, phân vị hướng tới số quan sát cân bằng; không có cách tốt hơn cho mọi mục tiêu. Xem số đếm thực tế; không dùng price bins làm predictor."
+  },
+  "dummy_columns_created": [
+    "room_type_Entire home/apt",
+    "room_type_Hotel room",
+    "room_type_Private room",
+    "room_type_Shared room"
+  ],
+  "dummy_sample": [
+    {
+      "room_type_Entire home/apt": 1,
+      "room_type_Hotel room": 0,
+      "room_type_Private room": 0,
+      "room_type_Shared room": 0
+    },
+    {
+      "room_type_Entire home/apt": 1,
+      "room_type_Hotel room": 0,
+      "room_type_Private room": 0,
+      "room_type_Shared room": 0
+    },
+    {
+      "room_type_Entire home/apt": 0,
+      "room_type_Hotel room": 0,
+      "room_type_Private room": 1,
+      "room_type_Shared room": 0
+    },
+    {
+      "room_type_Entire home/apt": 1,
+      "room_type_Hotel room": 0,
+      "room_type_Private room": 0,
+      "room_type_Shared room": 0
+    },
+    {
+      "room_type_Entire home/apt": 0,
+      "room_type_Hotel room": 0,
+      "room_type_Private room": 1,
+      "room_type_Shared room": 0
+    }
+  ]
+}

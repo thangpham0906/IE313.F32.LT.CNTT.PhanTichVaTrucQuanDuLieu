@@ -1,0 +1,98 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.1.1, pluggy-1.6.0 -- /var/www/lienthongdaihoc/IE313.F32.LT.CNTT.PhanTichVaTrucQuanDuLieu/workspaces/final-project/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /var/www/lienthongdaihoc/IE313.F32.LT.CNTT.PhanTichVaTrucQuanDuLieu/workspaces/final-project
+configfile: pyproject.toml
+plugins: cov-7.1.0, platformdirs-4.12.4
+collecting ... collected 72 items
+
+tests/test_audit_followup.py::test_explicit_bad_manifest_fails_without_outputs[None] PASSED [  1%]
+tests/test_audit_followup.py::test_explicit_bad_manifest_fails_without_outputs[{bad json] PASSED [  2%]
+tests/test_audit_followup.py::test_explicit_bad_manifest_fails_without_outputs[{}] PASSED [  4%]
+tests/test_audit_followup.py::test_explicit_bad_manifest_fails_without_outputs[{"sha256": ""}] PASSED [  5%]
+tests/test_audit_followup.py::test_sparse_audit_json_and_markdown_have_no_invented_results[prices0] PASSED [  6%]
+tests/test_audit_followup.py::test_sparse_audit_json_and_markdown_have_no_invented_results[prices1] PASSED [  8%]
+tests/test_audit_followup.py::test_sparse_audit_json_and_markdown_have_no_invented_results[prices2] PASSED [  9%]
+tests/test_audit_followup.py::test_download_race_preserves_competing_file PASSED [ 11%]
+tests/test_audit_followup.py::test_download_success_is_verified PASSED   [ 12%]
+tests/test_data_audit.py::TestPriceParsing::test_parse_standard_currency_string PASSED [ 13%]
+tests/test_data_audit.py::TestPriceParsing::test_parse_baht_symbol_string PASSED [ 15%]
+tests/test_data_audit.py::TestPriceParsing::test_parse_numeric_types PASSED [ 16%]
+tests/test_data_audit.py::TestPriceParsing::test_parse_negative_prices PASSED [ 18%]
+tests/test_data_audit.py::TestPriceParsing::test_parse_missing_and_empty_values PASSED [ 19%]
+tests/test_data_audit.py::TestPriceParsing::test_parse_invalid_strings PASSED [ 20%]
+tests/test_data_audit.py::TestPriceParsing::test_parse_invalid_groupings_and_locales PASSED [ 22%]
+tests/test_data_audit.py::TestPriceParsing::test_parse_booleans_and_infinities PASSED [ 23%]
+tests/test_data_audit.py::TestChecksumAndIntegrity::test_compute_and_verify_sha256 PASSED [ 25%]
+tests/test_data_audit.py::TestChecksumAndIntegrity::test_compute_sha256_missing_file_raises_error PASSED [ 26%]
+tests/test_data_audit.py::TestAuditStructureLogic::test_audit_dataset_structure_unique_ids PASSED [ 27%]
+tests/test_data_audit.py::TestAuditStructureLogic::test_audit_dataset_structure_with_duplicates PASSED [ 29%]
+tests/test_data_audit.py::TestAuditStructureLogic::test_audit_column_groups PASSED [ 30%]
+tests/test_data_audit.py::TestPriceAuditCalculations::test_audit_price_field_descriptive_stats PASSED [ 31%]
+tests/test_data_audit.py::TestPriceAuditCalculations::test_audit_price_field_empty_or_all_null PASSED [ 33%]
+tests/test_data_audit.py::TestCurrencyAndQuoteComparison::test_exact_matches_vs_tolerance_matches PASSED [ 34%]
+tests/test_data_audit.py::TestCurrencyAndQuoteComparison::test_quote_sample_less_than_100_and_json_errors PASSED [ 36%]
+tests/test_data_audit.py::TestHostClustering::test_audit_host_clustering_standard PASSED [ 37%]
+tests/test_data_audit.py::TestHostClustering::test_audit_host_clustering_empty_and_null_edge_cases PASSED [ 38%]
+tests/test_data_audit.py::TestCandidateVariablesAndCatalog::test_audit_candidate_variables PASSED [ 40%]
+tests/test_data_audit.py::TestCandidateVariablesAndCatalog::test_audit_temporal_coverage PASSED [ 41%]
+tests/test_data_audit.py::TestCandidateVariablesAndCatalog::test_generate_columns_catalog_structure PASSED [ 43%]
+tests/test_data_audit.py::TestChecksumFailureAndIntegrity::test_run_full_audit_mismatch_raises_value_error PASSED [ 44%]
+tests/test_data_audit.py::TestChecksumFailureAndIntegrity::test_run_full_audit_mismatch_does_not_overwrite_existing_reports PASSED [ 45%]
+tests/test_data_audit.py::TestChecksumFailureAndIntegrity::test_run_full_audit_without_expected_sha256 PASSED [ 47%]
+tests/test_data_audit.py::TestChecksumFailureAndIntegrity::test_cli_checksum_mismatch_exits_code_1 PASSED [ 48%]
+tests/test_data_audit.py::TestSafeAcquisitionAndImmutability::test_loader_does_not_modify_source_file PASSED [ 50%]
+tests/test_data_audit.py::TestSafeAcquisitionAndImmutability::test_safe_acquire_raw_data_already_exists PASSED [ 51%]
+tests/test_data_audit.py::TestSafeAcquisitionAndImmutability::test_safe_acquire_raw_data_existing_mismatch_preserves_file PASSED [ 52%]
+tests/test_data_audit.py::TestSafeAcquisitionAndImmutability::test_safe_acquire_raw_data_download_mismatch_cleans_tmp_and_preserves_dest PASSED [ 54%]
+tests/test_data_audit.py::TestMarkdownSync::test_generate_data_audit_markdown PASSED [ 55%]
+tests/test_eda_review_regressions.py::test_boxplot_quartiles_use_untrimmed_observations PASSED [ 56%]
+tests/test_eda_review_regressions.py::test_scatter_line_uses_same_full_pairs_as_correlation PASSED [ 58%]
+tests/test_eda_review_regressions.py::test_skew_and_nonsignificant_levene_do_not_certify_assumptions PASSED [ 59%]
+tests/test_eda_review_regressions.py::test_nonfinite_pairs_and_singleton_variance_are_not_fabricated PASSED [ 61%]
+tests/test_eda_review_regressions.py::test_catalog_uses_supplied_dataframe_and_real_axis_counts PASSED [ 62%]
+tests/test_eda_stats.py::TestPriceDistributionStats::test_standard_price_series PASSED [ 63%]
+tests/test_eda_stats.py::TestPriceDistributionStats::test_empty_and_all_null_series PASSED [ 65%]
+tests/test_eda_stats.py::TestPriceDistributionStats::test_constant_series_zero_variance PASSED [ 66%]
+tests/test_eda_stats.py::TestPriceDistributionStats::test_small_sample_size_edge_cases PASSED [ 68%]
+tests/test_eda_stats.py::TestRoomTypeStatsAndANOVA::test_compute_room_type_stats PASSED [ 69%]
+tests/test_eda_stats.py::TestRoomTypeStatsAndANOVA::test_evaluate_anova_conditions PASSED [ 70%]
+tests/test_eda_stats.py::TestRoomTypeStatsAndANOVA::test_compute_anova_test_omnibus_and_pairwise PASSED [ 72%]
+tests/test_eda_stats.py::TestRoomTypeStatsAndANOVA::test_anova_insufficient_groups PASSED [ 73%]
+tests/test_eda_stats.py::TestPairwiseCorrelations::test_standard_pairwise_correlation PASSED [ 75%]
+tests/test_eda_stats.py::TestPairwiseCorrelations::test_correlation_with_missing_values PASSED [ 76%]
+tests/test_eda_stats.py::TestPairwiseCorrelations::test_correlation_constant_feature PASSED [ 77%]
+tests/test_eda_stats.py::TestNeighbourhoodPivot::test_compute_neighbourhood_pivot PASSED [ 79%]
+tests/test_eda_stats.py::TestLesson02Demonstration::test_demonstrate_lesson02_wrangling PASSED [ 80%]
+tests/test_eda_stats.py::TestFullEDAWorkflow::test_run_full_eda_pipeline PASSED [ 81%]
+tests/test_eda_stats.py::TestFullEDAWorkflow::test_run_full_eda_hash_mismatch_raises_error PASSED [ 83%]
+tests/test_visualization.py::TestVisualizationRoutines::test_plot_price_distribution PASSED [ 84%]
+tests/test_visualization.py::TestVisualizationRoutines::test_plot_room_type_comparison PASSED [ 86%]
+tests/test_visualization.py::TestVisualizationRoutines::test_plot_size_correlation PASSED [ 87%]
+tests/test_visualization.py::TestVisualizationRoutines::test_plot_neighbourhood_analysis PASSED [ 88%]
+tests/test_visualization.py::TestVisualizationRoutines::test_generate_figures_catalog PASSED [ 90%]
+tests/test_visualization.py::TestVisualizationRoutines::test_run_all_visualizations_workflow PASSED [ 91%]
+tests/test_wrangling.py::test_keeps_extremes_missing_predictors_and_input PASSED [ 93%]
+tests/test_wrangling.py::test_exclusion_reasons_account_for_every_removed_row PASSED [ 94%]
+tests/test_wrangling.py::test_duplicates_only_removed_if_identical PASSED [ 95%]
+tests/test_wrangling.py::test_invalid_predictors_become_missing_without_filling PASSED [ 97%]
+tests/test_wrangling.py::test_schema_and_empty_results_fail PASSED       [ 98%]
+tests/test_wrangling.py::test_pipeline_reproducible_preserves_raw_and_rejects_bad_hash PASSED [100%]
+
+================================ tests coverage ================================
+_______________ coverage: platform linux, python 3.12.3-final-0 ________________
+
+Name                    Stmts   Miss  Cover   Missing
+-----------------------------------------------------
+src/__init__.py             0      0   100%
+src/audit_markdown.py      41      0   100%
+src/data_audit.py         297     34    89%   21, 155-158, 189, 300, 341, 431, 435, 458-460, 478, 488, 490, 494, 496, 498, 507-508, 549, 562-563, 680-688, 699-701, 705
+src/data_loader.py         78      6    92%   106-107, 114-115, 147, 188
+src/eda_report.py          34     34     0%   3-112
+src/eda_stats.py          233     22    91%   19, 131, 175, 289-303, 311-325, 356, 494-495, 525, 619-650, 654
+src/visualization.py      216     18    92%   59, 114, 189, 288, 299, 307, 321, 448-457, 461
+src/wrangling.py          105     11    90%   148, 178, 184-191, 204
+-----------------------------------------------------
+TOTAL                    1004    125    88%
+Coverage JSON written to file /tmp/ie313-step56-coverage.json
+============================= 72 passed in 20.73s ==============================

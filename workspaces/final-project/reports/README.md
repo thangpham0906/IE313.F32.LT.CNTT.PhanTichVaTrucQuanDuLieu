@@ -1,21 +1,21 @@
-# Bản khung báo cáo Nhóm 10
+# Sản phẩm báo cáo Nhóm 10
 
-[Báo cáo Word](Nhom10_Bao_cao.docx) được tạo ngày 10/10/2026 từ [template của giảng viên](../docs/Template_IE313.docx). Đây là bản nháp để điền dần theo tiến độ, chưa phải báo cáo nộp cuối kỳ. Template gốc được giữ nguyên. [PDF xem trước](Nhom10_Bao_cao_Khung.pdf) là bản xuất từ Word khung, chưa phải PDF nộp cuối kỳ.
+Cập nhật 12/10/2026: đã điền kết quả thật vào [Word](Nhom10_Bao_cao.docx) và xuất [PDF](Nhom10_Bao_cao.pdf). Đã có [12 slide PowerPoint](Nhom10_Slides.pptx), [PDF slide](Nhom10_Slides.pdf), [kịch bản 10 + 5 phút](Nhom10_Kich_ban_thuyet_trinh.md) và [hướng dẫn nộp](Nhom10_Huong_dan_nop.md). **Còn nhóm kiểm tra chéo, tổng duyệt và nộp; chưa coi là đã nghiệm thu bởi hai thành viên.**
 
-Bản Word giữ bìa/logo, khổ giấy, lề và các style của mẫu. Đã điền đề tài, thông tin hai thành viên, lớp, Nhóm 10 và tháng 10/2026; bìa không ghi GVHD. Phần Giới thiệu có đúng hai đoạn, dùng style BT dưới tiêu đề Heading 1. Các mục tiếp theo có bảng và vị trí chờ hình/kết quả; không chứa số liệu mô phỏng.
+## Nội dung hiện có
 
-## Cách hoàn thiện
+Word giữ bìa/logo, khổ giấy, lề và styles từ template; có thông tin hai thành viên, không ghi GVHD. Giới thiệu đúng hai đoạn BT dưới Heading 1 GIỚI THIỆU: mục tiêu/phương pháp/kết quả và minh bạch nguồn. Đã ghi xác nhận của nhóm: không tham khảo dự án/code mẫu, không dùng đề tài/dữ liệu làm đồ án môn khác; có AI hỗ trợ và nhóm chịu trách nhiệm kiểm tra.
 
-- Sửa trực tiếp bản Word. Các đoạn tô vàng hoặc chứa `[CHỜ…]`, `[BỔ SUNG…]`, `[CẦN…]`, `[CHÈN…]` là phần chưa hoàn thiện; thay bằng thông tin đã xác minh, rồi bỏ tô màu và nhãn bản khung khi nghiệm thu.
-- Hoàn thiện đoạn minh bạch trong Giới thiệu: nguồn/phiên bản dữ liệu, có dùng dự án mẫu hay không, nguồn/code và phần phát triển thêm nếu có, việc sử dụng đề tài/dữ liệu ở môn khác. Không tự khẳng định nhóm chưa từng tham khảo hoặc tái sử dụng khi chưa xác nhận.
-- Sau kiểm toán, cập nhật bảng nguồn và bảng biến; 12 biến hiện chỉ là ứng viên. Sau chạy notebook, cập nhật bảng xử lý, số mẫu, kiểm định, hình, mô hình và phát hiện. Chỉ đưa hình do nhóm sinh từ dữ liệu thực.
-- Hoàn thiện Giới thiệu và Kết luận sau cùng; kiểm tra hai đoạn Giới thiệu khoảng 10 dòng hoặc nửa trang trong Word/PDF. Giữ tiêu đề GIỚI THIỆU, không đổi thành tên khác.
-- Bổ sung tài liệu tham khảo thực sự sử dụng, URL phiên bản và ngày truy cập thực tế. Các mục tham khảo hiện tại là khung chờ xác minh.
-- Cập nhật bảng phân công bằng sản phẩm và mức độ hoàn thành thực tế. Theo dõi hạn nộp **18/10/2026** và các mốc tại [README đồ án](../README.md#ke-hoach-trien-khai).
-- Trước khi nộp, kiểm tra phần thân từ Giới thiệu đến Kết luận đạt 5–10 trang, không tính bìa/tài liệu tham khảo/phụ lục; điều chỉnh ngắt trang khi nội dung tăng. Xuất lại PDF từ Word đã hoàn thiện, đối chiếu số liệu/hình và cập nhật trường số trang.
+Báo cáo có bảng 12 biến đúng 5 cột, quyết định làm sạch, bốn RQ, bảng r/p/n và F/p, hình thật, phần train/CV và benchmark, bốn phát hiện, kết luận, tài liệu tham khảo và phụ lục phân công. Không có code dài, ô chờ hay số liệu mô phỏng trong phần thân. PDF có **11 trang tổng: bìa + 8 trang thân + tham khảo + phụ lục**.
 
-Không đánh dấu Bước 9 hoàn thành chỉ vì đã có file khung. Chỉ nghiệm thu khi các phần chờ đã được xử lý và số liệu truy về notebook chạy được.
+Chưa xây hồi quy cho Bangkok theo chính sách chọn biến hiện tại. Không biến số qua ngưỡng; điều kiện ANOVA làm bộ lọc phân loại chưa xác nhận. Báo cáo không kết luận dữ liệu không thể mô hình hóa và không có hệ số/alpha/hình phần dư giả. Xem [review Bước 7](qa_review_step_07.md).
 
-## Kiểm tra bản khung ngày 10/10/2026
+## Cập nhật tài liệu và kiểm tra
 
-Đã mở lại DOCX và kiểm tra: Giới thiệu có hai đoạn BT, tiêu đề dùng Heading 1/2, bìa đúng hai thành viên, template gốc không thay đổi. Đã xuất PDF và xem bố cục 8 trang: bìa + 5 trang phần thân + tài liệu tham khảo + phụ lục. Đây là số trang của bản khung; phải kiểm tra lại khi thêm nội dung và hình thực nghiệm.
+Dựng tài liệu bằng `scripts/build_report.py`, `scripts/build_slides.py`, sơ đồ bằng `scripts/create_report_flow.py`; hướng dẫn môi trường và xuất PDF ở [RUNBOOK](../docs/RUNBOOK.md#8-dựng-word-slide-và-pdf). Khi sửa trực tiếp Word/PPTX, lưu bản riêng trước khi chạy lại builder vì script sẽ tái tạo bản thảo.
+
+Đã mở lại DOCX/PPTX, xuất PDF bằng LibreOffice và xem bố cục; số liệu chính đối chiếu artifact. [Kiểm tra tổng hợp](qa_audit_report.md) ghi minh chứng. Nhóm vẫn phải kiểm tra font/phân trang trên máy dùng để trình bày, đọc nội dung và chạy lại notebook theo phân công. Không ghi nhận kiểm tra chéo của con người khi chưa được xác nhận.
+
+## Bản lịch sử
+
+`archive/Nhom10_Bao_cao_Khung_20261010.docx` và `Nhom10_Bao_cao_Khung.pdf` là khung ngày 10/10, không phải bộ nộp. `qa_response_step_07.md` là bàn giao Claude trước review, có nhãn lịch sử; kết quả hiện hành theo `qa_review_step_07.md` và artifact `modeling/`. Hai template giảng viên ở `docs/` được giữ nguyên.

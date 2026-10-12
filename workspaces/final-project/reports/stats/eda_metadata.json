@@ -1,0 +1,24 @@
+{
+  "eda_execution_timestamp_utc": "2026-10-11T14:49:36.288127+00:00",
+  "baseline_file": "bangkok_cleaned.csv",
+  "baseline_sha256": "961a01ad225e35f989ec81f124925488e392baca2ef3800ff4028b4423d5f9a7",
+  "total_baseline_rows": 28987,
+  "total_baseline_columns": 16,
+  "methods_reference": "docs/EDA_METHODS.md",
+  "moments": "bias=False, excess kurtosis, ddof=1; khác audit sơ bộ bias=True",
+  "inference_scope": "EXPLORATORY_ONLY",
+  "artifacts_generated": [
+    "rq1_price_distribution.json",
+    "rq1_price_distribution.csv",
+    "rq2_room_type_stats.json",
+    "rq2_room_type_stats.csv",
+    "rq2_anova_condition_checks.json",
+    "rq3_size_correlation.json",
+    "rq3_size_correlation.csv",
+    "rq4_neighbourhood_pivot_median.csv",
+    "rq4_neighbourhood_pivot_count.csv",
+    "rq4_neighbourhood_pivot_iqr.csv",
+    "rq4_neighbourhood_summary.json",
+    "lesson02_wrangling_demo.json"
+  ]
+}

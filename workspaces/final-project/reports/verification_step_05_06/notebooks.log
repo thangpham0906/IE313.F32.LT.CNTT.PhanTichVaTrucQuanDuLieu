@@ -1,0 +1,12 @@
+[NbConvertApp] Converting notebook notebooks/01_data_audit_and_cleaning.ipynb to notebook
+[IPKernelApp] WARNING | Kernel is running over TCP without encryption. All communication (including code and outputs) is sent in plain text and is susceptible to eavesdropping. Use IPC transport or launch with kernel manager-provisioned CurveZMQ keys to enable transport encryption.
+[NbConvertApp] Writing 27464 bytes to notebooks/01_data_audit_and_cleaning.ipynb
+EXECUTED 01_data_audit_and_cleaning
+[NbConvertApp] Converting notebook notebooks/02_eda_and_statistical_tests.ipynb to notebook
+[IPKernelApp] WARNING | Kernel is running over TCP without encryption. All communication (including code and outputs) is sent in plain text and is susceptible to eavesdropping. Use IPC transport or launch with kernel manager-provisioned CurveZMQ keys to enable transport encryption.
+[NbConvertApp] Writing 50227 bytes to notebooks/02_eda_and_statistical_tests.ipynb
+EXECUTED 02_eda_and_statistical_tests
+[NbConvertApp] Converting notebook notebooks/03_visualization_figures.ipynb to notebook
+[IPKernelApp] WARNING | Kernel is running over TCP without encryption. All communication (including code and outputs) is sent in plain text and is susceptible to eavesdropping. Use IPC transport or launch with kernel manager-provisioned CurveZMQ keys to enable transport encryption.
+[NbConvertApp] Writing 1025721 bytes to notebooks/03_visualization_figures.ipynb
+EXECUTED 03_visualization_figures

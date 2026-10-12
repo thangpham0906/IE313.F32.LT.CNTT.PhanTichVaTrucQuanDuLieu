@@ -1,0 +1,217 @@
+[
+  {
+    "figure_filename": "fig1_price_distribution.png",
+    "rq": "RQ1",
+    "title_vi": "Phân bố giá",
+    "chart_type": "Histogram toàn miền + vùng trung tâm",
+    "source_data_table": "reports/stats/rq1_price_distribution.json",
+    "sample_size_n": 28987,
+    "axis_ranges": {
+      "full": [
+        1.0,
+        1320255.0
+      ],
+      "zoom": [
+        0,
+        10000.0
+      ]
+    },
+    "out_of_frame_notes": {
+      "zoom_displayed": 28210,
+      "zoom_excluded": 777
+    },
+    "units": "THB/đêm",
+    "dataframe_sha256": "5fe8e72967119ff3abafb77143b140705762f4cf37ff753467d57fc28443e988",
+    "source_baseline_sha256": "961a01ad225e35f989ec81f124925488e392baca2ef3800ff4028b4423d5f9a7",
+    "dpi": 300,
+    "design_steps_summary": "Câu hỏi → kiểm tra biến/n → thông điệp theo kết quả → chọn hình → nhãn/giới hạn; chi tiết notebook 03"
+  },
+  {
+    "figure_filename": "fig2_price_by_room_type.png",
+    "rq": "RQ2",
+    "title_vi": "Giá theo loại phòng",
+    "chart_type": "Boxplot + trung vị/Q1–Q3 toàn mẫu",
+    "source_data_table": "reports/stats/rq2_room_type_stats.json",
+    "sample_size_n": 28987,
+    "axis_ranges": {
+      "box": [
+        0,
+        8000.0
+      ]
+    },
+    "out_of_frame_notes": {
+      "box_above_limit": 1123,
+      "box_statistics_fit": "ALL_VALID_ROWS"
+    },
+    "units": "THB/đêm",
+    "dataframe_sha256": "5fe8e72967119ff3abafb77143b140705762f4cf37ff753467d57fc28443e988",
+    "source_baseline_sha256": "961a01ad225e35f989ec81f124925488e392baca2ef3800ff4028b4423d5f9a7",
+    "dpi": 300,
+    "design_steps_summary": "Câu hỏi → kiểm tra biến/n → thông điệp theo kết quả → chọn hình → nhãn/giới hạn; chi tiết notebook 03"
+  },
+  {
+    "figure_filename": "fig3_price_vs_size_scatter.png",
+    "rq": "RQ3",
+    "title_vi": "Quy mô và giá",
+    "chart_type": "Scatter; OLS toàn bộ cặp hợp lệ",
+    "source_data_table": "reports/stats/rq3_size_correlation.json",
+    "sample_size_n": {
+      "accommodates": 28987,
+      "bedrooms": 25428,
+      "bathrooms": 26286,
+      "beds": 27717
+    },
+    "axis_ranges": {
+      "y": [
+        0,
+        20000.0
+      ]
+    },
+    "out_of_frame_notes": {
+      "accommodates": {
+        "n_valid": 28987,
+        "sample_selected": 3000,
+        "n_displayed": 2974,
+        "selected_outside_axis": 26,
+        "full_outside_axis": 273,
+        "not_sampled": 25987,
+        "seed": 42,
+        "trend": {
+          "slope": 907.1935783338565,
+          "intercept": 149.44054965713576,
+          "fit_n": 28987
+        }
+      },
+      "bedrooms": {
+        "n_valid": 25428,
+        "sample_selected": 3000,
+        "n_displayed": 2962,
+        "selected_outside_axis": 38,
+        "full_outside_axis": 256,
+        "not_sampled": 22428,
+        "seed": 42,
+        "trend": {
+          "slope": 1242.8530685315216,
+          "intercept": 1266.3167887229972,
+          "fit_n": 25428
+        }
+      },
+      "bathrooms": {
+        "n_valid": 26286,
+        "sample_selected": 3000,
+        "n_displayed": 2978,
+        "selected_outside_axis": 22,
+        "full_outside_axis": 247,
+        "not_sampled": 23286,
+        "seed": 42,
+        "trend": {
+          "slope": 1454.6970206076767,
+          "intercept": 984.4948868290958,
+          "fit_n": 26286
+        }
+      },
+      "beds": {
+        "n_valid": 27717,
+        "sample_selected": 3000,
+        "n_displayed": 2975,
+        "selected_outside_axis": 25,
+        "full_outside_axis": 254,
+        "not_sampled": 24717,
+        "seed": 42,
+        "trend": {
+          "slope": 647.1463634833266,
+          "intercept": 1783.2014417335743,
+          "fit_n": 27717
+        }
+      }
+    },
+    "units": "THB/đêm",
+    "dataframe_sha256": "5fe8e72967119ff3abafb77143b140705762f4cf37ff753467d57fc28443e988",
+    "source_baseline_sha256": "961a01ad225e35f989ec81f124925488e392baca2ef3800ff4028b4423d5f9a7",
+    "dpi": 300,
+    "design_steps_summary": "Câu hỏi → kiểm tra biến/n → thông điệp theo kết quả → chọn hình → nhãn/giới hạn; chi tiết notebook 03"
+  },
+  {
+    "figure_filename": "fig4_price_by_neighbourhood_heatmap.png",
+    "rq": "RQ4",
+    "title_vi": "Quận × loại phòng",
+    "chart_type": "Heatmap trung vị, n và cảnh báo n<5",
+    "source_data_table": "reports/stats/rq4_neighbourhood_pivot_median.csv",
+    "sample_size_n": 23043,
+    "axis_ranges": {
+      "districts": [
+        "Vadhana",
+        "Huai Khwang",
+        "Khlong Toei",
+        "Ratchathewi",
+        "Phra Nakhon",
+        "Sathon",
+        "Phra Khanong",
+        "Bang Rak",
+        "Suanluang",
+        "Chatu Chak",
+        "Bang Na",
+        "Khlong San",
+        "Parthum Wan",
+        "Bang Kapi",
+        "Din Daeng"
+      ],
+      "room_types": [
+        "Entire home/apt",
+        "Hotel room",
+        "Private room",
+        "Shared room"
+      ]
+    },
+    "out_of_frame_notes": {
+      "listings_not_in_displayed_districts": 5944
+    },
+    "units": "THB/đêm",
+    "dataframe_sha256": "5fe8e72967119ff3abafb77143b140705762f4cf37ff753467d57fc28443e988",
+    "source_baseline_sha256": "961a01ad225e35f989ec81f124925488e392baca2ef3800ff4028b4423d5f9a7",
+    "dpi": 300,
+    "design_steps_summary": "Câu hỏi → kiểm tra biến/n → thông điệp theo kết quả → chọn hình → nhãn/giới hạn; chi tiết notebook 03"
+  },
+  {
+    "figure_filename": "fig4_price_top_neighbourhoods_bar.png",
+    "rq": "RQ4",
+    "title_vi": "Giá theo quận trong Entire home/apt",
+    "chart_type": "Bar trung vị cùng loại phòng",
+    "source_data_table": "reports/stats/rq4_neighbourhood_pivot_median.csv",
+    "sample_size_n": 7291,
+    "axis_ranges": {
+      "room_type": "Entire home/apt",
+      "districts": [
+        "Bang Phlat",
+        "Thon buri",
+        "Bang Na",
+        "Bang Sue",
+        "Lak Si",
+        "Suanluang",
+        "Wang Thong Lang",
+        "Chom Thong",
+        "Phasi Charoen",
+        "Bang Khae",
+        "Sai Mai",
+        "Vadhana",
+        "Bang Rak",
+        "Dusit",
+        "Bangkok Yai",
+        "Saphan Sung",
+        "Parthum Wan",
+        "Phra Nakhon",
+        "Lat Phrao",
+        "Samphanthawong"
+      ]
+    },
+    "out_of_frame_notes": {
+      "minimum_n": 20,
+      "note": "Tối đa 10 thấp và 10 cao; ngưỡng chỉ để hiển thị"
+    },
+    "units": "THB/đêm",
+    "dataframe_sha256": "5fe8e72967119ff3abafb77143b140705762f4cf37ff753467d57fc28443e988",
+    "source_baseline_sha256": "961a01ad225e35f989ec81f124925488e392baca2ef3800ff4028b4423d5f9a7",
+    "dpi": 300,
+    "design_steps_summary": "Câu hỏi → kiểm tra biến/n → thông điệp theo kết quả → chọn hình → nhãn/giới hạn; chi tiết notebook 03"
+  }
+]

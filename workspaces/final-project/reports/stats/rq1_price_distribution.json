@@ -1,0 +1,22 @@
+{
+  "n": 28987,
+  "min": 1.0,
+  "max": 1320255.0,
+  "mean": 2955.96,
+  "std": 19054.72,
+  "variance": 363082418.47,
+  "cv_pct": 644.62,
+  "median": 1592.0,
+  "mode": 1712.0,
+  "q1": 1041.47,
+  "q3": 2539.57,
+  "iqr": 1498.1,
+  "lower_bound": -1205.68,
+  "upper_bound": 4786.72,
+  "outliers_count": 2730,
+  "outliers_pct": 9.42,
+  "skewness": 52.3111,
+  "kurtosis": 3094.3914,
+  "status": "COMPUTED",
+  "moment_estimator": "skew/kurtosis bias=False; Fisher excess kurtosis; variance/std ddof=1"
+}

@@ -1,0 +1,11 @@
+# Requirements phát triển & kiểm thử (Dev & QA) - IE313 Nhóm 10
+-r requirements.txt
+
+pytest>=7.0.0
+pytest-cov>=4.0.0
+ruff>=0.1.0
+
+# Chạy notebook 01 ở chế độ headless để kiểm tra tái lập
+nbformat>=5.9
+nbconvert>=7.0
+ipykernel>=6.0

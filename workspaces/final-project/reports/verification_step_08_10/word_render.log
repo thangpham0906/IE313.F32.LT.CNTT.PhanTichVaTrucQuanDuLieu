@@ -1,0 +1,2 @@
+convert /var/www/lienthongdaihoc/IE313.F32.LT.CNTT.PhanTichVaTrucQuanDuLieu/workspaces/final-project/reports/Nhom10_Bao_cao.docx as a Writer document -> /var/www/lienthongdaihoc/IE313.F32.LT.CNTT.PhanTichVaTrucQuanDuLieu/workspaces/final-project/reports/Nhom10_Bao_cao.pdf using filter : writer_pdf_Export
+Overwriting: /var/www/lienthongdaihoc/IE313.F32.LT.CNTT.PhanTichVaTrucQuanDuLieu/workspaces/final-project/reports/Nhom10_Bao_cao.pdf

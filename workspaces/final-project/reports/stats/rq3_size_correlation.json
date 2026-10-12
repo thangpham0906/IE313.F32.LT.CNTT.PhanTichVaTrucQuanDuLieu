@@ -1,0 +1,50 @@
+[
+  {
+    "feature": "accommodates",
+    "target": "price",
+    "n_total": 28987,
+    "n_valid": 28987,
+    "n_missing": 0,
+    "missing_pct": 0.0,
+    "pearson_r": 0.1067,
+    "p_value": 4.267508388075424e-74,
+    "strength": "Yếu (Weak)",
+    "status": "COMPUTED"
+  },
+  {
+    "feature": "bedrooms",
+    "target": "price",
+    "n_total": 28987,
+    "n_valid": 25428,
+    "n_missing": 3559,
+    "missing_pct": 12.28,
+    "pearson_r": 0.0881,
+    "p_value": 6.035804599253387e-45,
+    "strength": "Yếu (Weak)",
+    "status": "COMPUTED"
+  },
+  {
+    "feature": "bathrooms",
+    "target": "price",
+    "n_total": 28987,
+    "n_valid": 26286,
+    "n_missing": 2701,
+    "missing_pct": 9.32,
+    "pearson_r": 0.0841,
+    "p_value": 1.9766756822946416e-42,
+    "strength": "Yếu (Weak)",
+    "status": "COMPUTED"
+  },
+  {
+    "feature": "beds",
+    "target": "price",
+    "n_total": 28987,
+    "n_valid": 27717,
+    "n_missing": 1270,
+    "missing_pct": 4.38,
+    "pearson_r": 0.0688,
+    "p_value": 1.9016984430195836e-30,
+    "strength": "Yếu (Weak)",
+    "status": "COMPUTED"
+  }
+]

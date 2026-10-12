@@ -1,0 +1,66 @@
+{
+  "status": "COMPUTED",
+  "condition_checks": {
+    "status": "EVALUATED",
+    "all_parametric_assumptions_met": false,
+    "normality_evaluation": {
+      "assumption_satisfied": false,
+      "by_group": {
+        "Entire home/apt": {
+          "n": 19300,
+          "skewness": 48.14996627762513,
+          "severe_skew_warning": true
+        },
+        "Hotel room": {
+          "n": 275,
+          "skewness": 16.103271989489496,
+          "severe_skew_warning": true
+        },
+        "Private room": {
+          "n": 8914,
+          "skewness": 65.82850361957567,
+          "severe_skew_warning": true
+        },
+        "Shared room": {
+          "n": 498,
+          "skewness": 9.975493562709707,
+          "severe_skew_warning": true
+        }
+      },
+      "note": "|skew| > 2 chỉ là cảnh báo mô tả; skew nhỏ không xác nhận tính chuẩn."
+    },
+    "homoscedasticity_evaluation": {
+      "test": "[MỞ RỘNG NGOÀI BÀI HỌC] Levene (center=median)",
+      "statistic": 3.1229788630382243,
+      "p_value": 0.02478257830764562,
+      "equal_variance_assumption_satisfied": false,
+      "conclusion": "Có bằng chứng chống giả thuyết phương sai bằng nhau, với giới hạn độc lập."
+    },
+    "sample_size_balance": {
+      "group_sizes": {
+        "Entire home/apt": 19300,
+        "Hotel room": 275,
+        "Private room": 8914,
+        "Shared room": 498
+      },
+      "max_to_min_ratio": 70.18181818181819
+    },
+    "independence_evaluation": {
+      "unique_hosts": 7231,
+      "multi_listing_hosts": 3215,
+      "host_id_missing": 0,
+      "independence_confirmed": false,
+      "note": "ID duy nhất không chứng minh độc lập; host clustering giới hạn diễn giải p-value."
+    },
+    "scientific_recommendation": "Chưa xác nhận mọi giả định; F/p chỉ minh họa thăm dò. Ưu tiên mô tả median/IQR; không suy rộng kiểm định hoặc kết luận nhân quả."
+  },
+  "pairwise_subgroup_tests": [],
+  "pairwise_status": "SKIPPED_ASSUMPTIONS_NOT_CONFIRMED",
+  "omnibus_test": {
+    "f_statistic": 5.932326219191372,
+    "p_value": 0.0004855420465163904,
+    "significant_at_alpha": true,
+    "alpha": 0.05,
+    "caveat": "Chỉ thăm dò; chưa xác nhận đủ điều kiện suy luận."
+  }
+}

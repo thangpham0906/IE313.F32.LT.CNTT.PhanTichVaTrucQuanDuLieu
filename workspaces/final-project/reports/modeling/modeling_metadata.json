@@ -1,0 +1,110 @@
+{
+  "modeling_execution_timestamp_utc": "2026-10-11T15:06:53.849970+00:00",
+  "dataset_baseline_filename": "bangkok_cleaned.csv",
+  "dataset_baseline_sha256": "961a01ad225e35f989ec81f124925488e392baca2ef3800ff4028b4423d5f9a7",
+  "random_state": 42,
+  "versions": {
+    "python": "3.12.3",
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1"
+  },
+  "allowlist_features": [
+    "room_type",
+    "property_type",
+    "neighbourhood_cleansed",
+    "accommodates",
+    "bedrooms",
+    "bathrooms",
+    "beds",
+    "minimum_nights",
+    "number_of_reviews",
+    "review_scores_rating",
+    "host_is_superhost"
+  ],
+  "forbidden_columns_enforced": [
+    "id",
+    "host_id",
+    "last_scraped",
+    "price_raw",
+    "price_quote_checkin_date",
+    "price_quote_checkout_date",
+    "price_quote_total_price",
+    "price_quote_price_per_night",
+    "price_quote_raw",
+    "estimated_occupancy_l365d",
+    "estimated_revenue_l365d"
+  ],
+  "split_info": {
+    "n_total": 28987,
+    "n_train": 20290,
+    "n_test": 8697,
+    "test_size_ratio": 0.3,
+    "random_state": 42,
+    "n_cv_splits": 4,
+    "host_overlap": {
+      "total_hosts_train": 5879,
+      "total_hosts_test": 3581,
+      "overlapping_hosts_count": 2229,
+      "overlapping_hosts_pct_of_test": 62.25,
+      "test_listings_belonging_to_train_hosts": 7202,
+      "test_listings_belonging_to_train_hosts_pct": 82.81,
+      "methodological_caveat": "82.81% listing trong tập test thuộc về các chủ nhà đã xuất hiện trong tập train. Phân chia ngẫu nhiên theo listing chỉ đánh giá khả năng dự báo trên các chỗ ở mới trong cùng tập dữ liệu, KHÔNG đánh giá khả năng tổng quát hóa sang chủ nhà mới."
+    }
+  },
+  "feasibility_decision": {
+    "is_modeling_feasible": false,
+    "infeasibility_reason": "Theo quy tắc |r|≥0.3 và p<0.05, số biến chọn ở các fold là [0, 0, 0, 0]; full train có 0 biến. Fold không có biến: fold_1, fold_2, fold_3, fold_4. Biến phân loại chưa được chọn do giả định dùng ANOVA chưa xác nhận; xem chẩn đoán từng biến/fold. Chưa triển khai hồi quy theo chính sách hiện tại; đây không phải chứng minh dữ liệu không thể mô hình hóa."
+  },
+  "benchmark_results": {
+    "model_name": "DummyRegressor (Mean Benchmark - Bổ sung kỹ thuật)",
+    "train_mean_prediction_thb": 2976.1215342533264,
+    "train_mse": 383665813.43737215,
+    "train_r2": 0.0,
+    "train_r2_reason": null,
+    "test_mse": 315021203.8296908,
+    "test_r2": -1.4334218385370079e-05,
+    "test_r2_reason": null,
+    "cv_4fold_mse_mean": 383714969.8387924,
+    "cv_4fold_mse_std": 218999303.9983424,
+    "cv_4fold_mse_by_fold": [
+      58292575.94176567,
+      538236364.4512585,
+      623215151.3797215,
+      315115787.58242387
+    ],
+    "cv_4fold_r2_mean": -0.000534793950980661,
+    "cv_4fold_r2_std": 0.0006063119655241671,
+    "cv_4fold_r2_by_fold": [
+      -0.0015508545904099336,
+      -0.00043032584586200073,
+      -2.6317363710504083e-06,
+      -0.00015536363127965913
+    ],
+    "cv_r2_reasons": [
+      null,
+      null,
+      null,
+      null
+    ],
+    "cv_n_splits": 4,
+    "cv_std_ddof": 0,
+    "status": "COMPLETED_BENCHMARK"
+  },
+  "conditional_artifacts": {
+    "best_pipeline_joblib": null,
+    "model_diagnostics_npz": null,
+    "diagnostic_figures": null,
+    "status_explanation": "Chưa có hồi quy theo quy tắc chọn biến hiện tại; chỉ có mốc trung bình.",
+    "archived_previous_artifacts": []
+  },
+  "trained_models": null,
+  "artifacts_generated": [
+    "split_assignments.csv",
+    "feature_selection.json",
+    "model_comparison.csv",
+    "modeling_metadata.json",
+    "modeling_findings.md"
+  ]
+}

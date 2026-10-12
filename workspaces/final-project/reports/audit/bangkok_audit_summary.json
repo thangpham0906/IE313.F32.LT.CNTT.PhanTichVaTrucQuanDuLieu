@@ -1,0 +1,376 @@
+{
+  "audit_metadata": {
+    "dataset_filename": "bangkok_listings_2026-06-29.csv.gz",
+    "sha256": "b17b99f9c421c566cc26a1c89a0b3d16b4c7f3dc74e659141900ccbac316b20e",
+    "expected_sha256": "b17b99f9c421c566cc26a1c89a0b3d16b4c7f3dc74e659141900ccbac316b20e",
+    "checksum_status": "MATCH",
+    "checksum_verified": true,
+    "file_size_bytes": 20625983,
+    "audit_timestamp_utc": "2026-10-11T14:49:30.453876+00:00"
+  },
+  "structure": {
+    "total_rows": 31069,
+    "total_columns": 90,
+    "total_cells": 2796210,
+    "total_missing_cells": 581427,
+    "total_missing_cells_pct": 20.79,
+    "complete_duplicate_rows": 0,
+    "has_id_column": true,
+    "unique_ids_count": 31069,
+    "duplicate_id_rows": 0,
+    "is_one_row_per_listing": true,
+    "dtype_counts": {
+      "float64": 38,
+      "str": 28,
+      "int64": 24
+    }
+  },
+  "column_groups": {
+    "group_counts": {
+      "id_source": 7,
+      "host": 28,
+      "location": 5,
+      "property_room": 11,
+      "price_quotes": 6,
+      "availability_policy": 17,
+      "reviews": 14,
+      "estimates": 2
+    },
+    "total_columns_categorized": 90,
+    "groups": {
+      "id_source": [
+        "id",
+        "listing_url",
+        "scrape_id",
+        "last_scraped",
+        "source",
+        "picture_url",
+        "license"
+      ],
+      "host": [
+        "host_id",
+        "host_url",
+        "host_profile_id",
+        "host_profile_url",
+        "host_name",
+        "host_since",
+        "hosts_time_as_user_years",
+        "hosts_time_as_user_months",
+        "hosts_time_as_host_years",
+        "hosts_time_as_host_months",
+        "host_location",
+        "host_about",
+        "host_response_time",
+        "host_response_rate",
+        "host_acceptance_rate",
+        "host_is_superhost",
+        "host_thumbnail_url",
+        "host_picture_url",
+        "host_neighbourhood",
+        "host_listings_count",
+        "host_total_listings_count",
+        "host_verifications",
+        "host_has_profile_pic",
+        "host_identity_verified",
+        "calculated_host_listings_count",
+        "calculated_host_listings_count_entire_homes",
+        "calculated_host_listings_count_private_rooms",
+        "calculated_host_listings_count_shared_rooms"
+      ],
+      "location": [
+        "neighbourhood",
+        "neighbourhood_cleansed",
+        "neighbourhood_group_cleansed",
+        "latitude",
+        "longitude"
+      ],
+      "property_room": [
+        "name",
+        "description",
+        "neighborhood_overview",
+        "property_type",
+        "room_type",
+        "accommodates",
+        "bathrooms",
+        "bathrooms_text",
+        "bedrooms",
+        "beds",
+        "amenities"
+      ],
+      "price_quotes": [
+        "price",
+        "price_quote_checkin_date",
+        "price_quote_checkout_date",
+        "price_quote_total_price",
+        "price_quote_price_per_night",
+        "price_quote_raw"
+      ],
+      "availability_policy": [
+        "minimum_nights",
+        "maximum_nights",
+        "minimum_minimum_nights",
+        "maximum_minimum_nights",
+        "minimum_maximum_nights",
+        "maximum_maximum_nights",
+        "minimum_nights_avg_ntm",
+        "maximum_nights_avg_ntm",
+        "calendar_updated",
+        "has_availability",
+        "availability_30",
+        "availability_60",
+        "availability_90",
+        "availability_365",
+        "calendar_last_scraped",
+        "availability_eoy",
+        "instant_bookable"
+      ],
+      "reviews": [
+        "number_of_reviews",
+        "number_of_reviews_ltm",
+        "number_of_reviews_l30d",
+        "number_of_reviews_ly",
+        "first_review",
+        "last_review",
+        "review_scores_rating",
+        "review_scores_accuracy",
+        "review_scores_cleanliness",
+        "review_scores_checkin",
+        "review_scores_communication",
+        "review_scores_location",
+        "review_scores_value",
+        "reviews_per_month"
+      ],
+      "estimates": [
+        "estimated_occupancy_l365d",
+        "estimated_revenue_l365d"
+      ]
+    }
+  },
+  "temporal_coverage": {
+    "column": "last_scraped",
+    "distinct_dates_count": 4,
+    "earliest_date": "2026-06-29",
+    "latest_date": "2026-07-02",
+    "date_distribution": {
+      "2026-07-02": 13286,
+      "2026-06-29": 9656,
+      "2026-07-01": 5372,
+      "2026-06-30": 2755
+    }
+  },
+  "price_audit": {
+    "total_rows": 31069,
+    "raw_null_count": 2082,
+    "raw_null_pct": 6.7,
+    "valid_count": 28987,
+    "valid_pct": 93.3,
+    "invalid_or_missing_count": 2082,
+    "zero_price_count": 0,
+    "negative_price_count": 0,
+    "descriptive_statistics": {
+      "min": 1.0,
+      "q1": 1041.4650000000001,
+      "median": 1592.0,
+      "mean": 2955.96,
+      "std": 19054.72,
+      "q3": 2539.565,
+      "max": 1320255.0,
+      "iqr": 1498.1,
+      "outlier_bounds": {
+        "lower_bound": -1205.68,
+        "upper_bound": 4786.72
+      },
+      "outliers_count_1_5_iqr": 2730,
+      "outliers_pct": 9.42,
+      "skewness": 52.3084,
+      "kurtosis": 3093.8575
+    }
+  },
+  "currency_and_granularity": {
+    "status": "ANALYZED",
+    "has_price_quote_raw": true,
+    "has_price_quote_price_per_night": true,
+    "has_price_quote_total_price": true,
+    "findings": [
+      "Phát hiện ký hiệu '฿' (Thai Baht) trong 97/100 mẫu chuỗi quote được đánh giá.",
+      "Cột 'price' khớp chính xác 100% với 'price_quote_price_per_night' (đơn giá theo đêm)."
+    ],
+    "quote_sample_evaluated_count": 100,
+    "quote_sample_with_baht_symbol": 97,
+    "quote_sample_json_errors": 2,
+    "price_vs_quote_per_night_comparison": {
+      "total_compared": 28987,
+      "exact_matches": 28987,
+      "exact_match_rate_pct": 100.0,
+      "tolerance_threshold": 0.05,
+      "tolerance_matches": 28987,
+      "tolerance_match_rate_pct": 100.0,
+      "max_difference": 0.0,
+      "mean_difference": 0.0
+    }
+  },
+  "candidate_variables": {
+    "price": {
+      "present": true,
+      "dtype": "str",
+      "null_count": 2082,
+      "null_pct": 6.7,
+      "unique_count": 15521,
+      "sample_values": [
+        "$1,148.24",
+        "$776.85",
+        "$723.25"
+      ]
+    },
+    "room_type": {
+      "present": true,
+      "dtype": "str",
+      "null_count": 0,
+      "null_pct": 0.0,
+      "unique_count": 4,
+      "sample_values": [
+        "Entire home/apt",
+        "Private room",
+        "Entire home/apt"
+      ]
+    },
+    "property_type": {
+      "present": true,
+      "dtype": "str",
+      "null_count": 0,
+      "null_pct": 0.0,
+      "unique_count": 79,
+      "sample_values": [
+        "Entire rental unit",
+        "Private room in hostel",
+        "Entire rental unit"
+      ]
+    },
+    "neighbourhood_cleansed": {
+      "present": true,
+      "dtype": "str",
+      "null_count": 0,
+      "null_pct": 0.0,
+      "unique_count": 50,
+      "sample_values": [
+        "Khlong Toei",
+        "Ratchathewi",
+        "Khlong San"
+      ]
+    },
+    "accommodates": {
+      "present": true,
+      "dtype": "int64",
+      "null_count": 0,
+      "null_pct": 0.0,
+      "unique_count": 16,
+      "sample_values": [
+        2,
+        12,
+        3
+      ]
+    },
+    "bedrooms": {
+      "present": true,
+      "dtype": "float64",
+      "null_count": 3897,
+      "null_pct": 12.54,
+      "unique_count": 25,
+      "sample_values": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "bathrooms": {
+      "present": true,
+      "dtype": "float64",
+      "null_count": 4122,
+      "null_pct": 13.27,
+      "unique_count": 32,
+      "sample_values": [
+        0.5,
+        1.5,
+        1.0
+      ]
+    },
+    "beds": {
+      "present": true,
+      "dtype": "float64",
+      "null_count": 2651,
+      "null_pct": 8.53,
+      "unique_count": 34,
+      "sample_values": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "minimum_nights": {
+      "present": true,
+      "dtype": "float64",
+      "null_count": 2,
+      "null_pct": 0.01,
+      "unique_count": 95,
+      "sample_values": [
+        5.0,
+        1.0,
+        28.0
+      ]
+    },
+    "number_of_reviews": {
+      "present": true,
+      "dtype": "int64",
+      "null_count": 0,
+      "null_pct": 0.0,
+      "unique_count": 436,
+      "sample_values": [
+        22,
+        0,
+        1
+      ]
+    },
+    "review_scores_rating": {
+      "present": true,
+      "dtype": "float64",
+      "null_count": 10253,
+      "null_pct": 33.0,
+      "unique_count": 150,
+      "sample_values": [
+        4.59,
+        3.0,
+        3.0
+      ]
+    },
+    "host_is_superhost": {
+      "present": true,
+      "dtype": "str",
+      "null_count": 0,
+      "null_pct": 0.0,
+      "unique_count": 2,
+      "sample_values": [
+        "f",
+        "f",
+        "f"
+      ]
+    }
+  },
+  "host_clustering": {
+    "total_listings_with_host": 31069,
+    "unique_hosts_count": 7935,
+    "multi_listing_hosts_count": 3430,
+    "multi_listing_hosts_pct": 43.23,
+    "single_listing_hosts_count": 4505,
+    "single_listing_hosts_pct": 56.77,
+    "max_listings_single_host": 247,
+    "mean_listings_per_host": 3.92,
+    "median_listings_per_host": 1.0,
+    "top_5_hosts": {
+      "574804920": 247,
+      "262132406": 234,
+      "493412920": 231,
+      "201677068": 191,
+      "10005164": 182
+    }
+  }
+}

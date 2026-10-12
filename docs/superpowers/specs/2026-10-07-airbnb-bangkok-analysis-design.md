@@ -29,7 +29,7 @@
 
 ### 1.2 Mục tiêu cụ thể
 
-1. Thu thập và kiểm toán bộ dữ liệu Inside Airbnb Bangkok; phiên bản 29/06/2026 là ứng viên từ kế hoạch cũ, cần xác minh khả năng tải và nội dung trước khi cố định phiên bản.
+1. Thu thập và kiểm toán bộ dữ liệu Inside Airbnb Bangkok; phiên bản 29/06/2026 đã được tải và xác minh bằng manifest/SHA-256.
 2. Làm sạch dữ liệu có cơ sở khoa học (Data Cleaning có giải trình: Vấn đề $\rightarrow$ Cách xử lý $\rightarrow$ Lý do $\rightarrow$ Ảnh hưởng).
 3. Phân tích đặc trưng phân bố của biến mục tiêu trung tâm: Giá thuê (`price`).
 4. Kiểm định mối liên hệ giữa các đặc điểm của listing (định lượng và định tính) với giá thuê bằng thống kê mô tả, tương quan Pearson ($r$, $p$-value), và phân tích phương sai ANOVA ($F$, $p$-value) theo Bài 05.
@@ -46,7 +46,7 @@ Số trang dưới đây là **trang PDF tính từ 1**, không phải số slid
 |---|---|---|
 | [TH 01 — Python cho phân tích dữ liệu](../../../slide-study/Bai_Giang_TH_01_Python_for_DA.pdf), phần kiểu dữ liệu, hàm, Pandas; tr. 28–31 | Kiểu dữ liệu, hàm, thao tác Series/DataFrame | Hàm xử lý tái sử dụng trong `src/`, các notebook |
 | [Bài 01 — Nhập/xuất dữ liệu](../../../slide-study/Bai01_Gioi_thieu_PTDL-Nhap_Xuat_Bo_du_lieu.pdf), tr. 14–21 | Đọc file bằng Pandas, xem dữ liệu và kiểu dữ liệu, thống kê ban đầu, xuất dữ liệu | Notebook 01: nguồn dữ liệu, `shape`, `head`, `info`, `dtypes`, bảng mô tả biến và file sạch |
-| [Bài 02 — Sắp xếp dữ liệu](../../../slide-study/Bai02_Sap_xep_DL.pdf), tr. 4–23 | Xử lý khuyết, ép kiểu/đơn vị; simple feature scaling, Min-Max, Z-score; binning; `get_dummies` | Notebook 01: bảng giải trình làm sạch; minh họa chuẩn hóa, chia khoảng, dummy khi có biến phù hợp |
+| [Bài 02 — Sắp xếp dữ liệu](../../../slide-study/Bai02_Sap_xep_DL.pdf), tr. 4–23 | Xử lý khuyết, ép kiểu/đơn vị; simple feature scaling, Min-Max, Z-score; binning; `get_dummies` | Notebook 01: bảng giải trình làm sạch; notebook 02–03 minh họa chuẩn hóa/chia khoảng/dummy trên bản EDA riêng khi phù hợp |
 | [Bài 03 — Trực quan dữ liệu](../../../slide-study/Bai03_Truc_quan.pdf), tr. 19–26, 29–39 | Kiến trúc Matplotlib, Figure/Axes và phương thức vẽ | Notebook 03: biểu đồ có tiêu đề, nhãn, đơn vị, chú giải; triển khai OO theo quy chuẩn repository |
 | [Bài 04 — Công cụ trực quan](../../../slide-study/Bai04_Cong_cu_TQ.pdf), tr. 4–5, 6–67 | Quy trình 5 bước; line, area, histogram, bar, pie, box, scatter; waffle, word cloud, dashboard | Notebook 03: ưu tiên histogram, boxplot, bar, scatter; các dạng còn lại chỉ dùng nếu trả lời được RQ từ dữ liệu thực |
 | [Bài 05 — EDA](../../../slide-study/Bai05_PT_Tham_do.pdf), tr. 4–20, 24–37 | Mean/median/mode, 5 số, phương sai/std/CV, skewness/kurtosis, IQR; Pearson; `groupby`, pivot, heatmap; ANOVA và so sánh cặp nhóm | Notebook 02: bảng thống kê, bảng $r$–$p$, bảng $F$–$p$, bảng nhóm/pivot và diễn giải |
@@ -74,17 +74,17 @@ Nếu thật sự cần dùng kiến thức ngoài bài học, ghi ngay tại m�
 
 Phần mở rộng phải tách khỏi kết quả cốt lõi. Phân tích chính giữ phương pháp trong bài học; kiểm tra độ nhạy theo chủ nhà, nếu triển khai, ghi nhãn mở rộng và trình bày riêng theo mục 4.2. `ColumnTransformer`/`OneHotEncoder` là bổ sung triển khai cho Pipeline hỗn hợp số–phân loại, không gán tên API cho bài giảng chưa xác nhận.
 
-### 1.5 Phạm vi Bangkok và trạng thái xác minh ngày 10/10/2026
+### 1.5 Phạm vi Bangkok và trạng thái xác minh ngày 12/10/2026
 
-- **Nguồn dự kiến**: Inside Airbnb Bangkok. Bước 1 phải lưu URL tải trực tiếp, phiên bản, ngày tải, điều khoản sử dụng/giấy phép và SHA-256 tại `data/source_manifest.json`; hiện chưa có manifest trong repo.
-- **Bản dữ liệu**: Chưa có file Airbnb trong repo. Phiên bản 29/06/2026 và tên `data/raw/bangkok_listings_2026-06-29.csv.gz` là dự kiến, chưa xác nhận. Các con số 31.069 dòng × 90 cột, 31.069 ID duy nhất và 28.987 dòng có giá từng ghi trong bản cũ **chưa có minh chứng tái lập trong repo, không được dùng như kết quả đã kiểm toán**.
-- **Đơn vị quan sát dự kiến**: Một listing trong một đợt phát hành; phải xác minh bằng dữ liệu thực. Khoảng ngày `last_scraped` chưa xác nhận; không đồng nhất nhãn phát hành với thời điểm quan sát của mọi dòng.
-- **Giá mục tiêu dự kiến**: Báo giá theo đêm; tiền tệ THB, ý nghĩa ký hiệu `$`, kỳ lưu trú, thuế/phí và quan hệ giữa `price` với cột báo giá phụ trợ đều phải xác minh ở Bước 1. Chỉ gắn nhãn THB/đêm khi có bằng chứng nguồn. Không suy ra giá giao dịch, doanh thu hoặc chênh lệch trong điều kiện đặt phòng đồng nhất.
-- **12 biến ứng viên cần kiểm tra sự hiện diện và ý nghĩa**: `price`, `room_type`, `property_type`, `neighbourhood_cleansed`, `accommodates`, `bedrooms`, `bathrooms`, `beds`, `minimum_nights`, `number_of_reviews`, `review_scores_rating`, `host_is_superhost`. Chưa phải schema được xác nhận hay tập biến được chọn cho mô hình.
-- **Cột phụ trợ cần kiểm tra nếu có**: `id`, `host_id`, `source`, `last_scraped`, `price_quote_*`; không đưa định danh hoặc các cột báo giá vào biến dự báo. Không sử dụng `estimated_revenue_l365d` để dự đoán giá.
-- **Giới hạn triển khai**: Một thành phố, một bản listings; chưa mở rộng calendar, NLP, bản đồ, dashboard hoặc so sánh nhiều thành phố. Không mặc định mẫu dữ liệu đại diện toàn bộ thị trường Bangkok.
+- **Nguồn chính thức**: Inside Airbnb Bangkok. Đã tải tệp detailed listings đợt phát hành 29/06/2026 vào `data/raw/bangkok_listings_2026-06-29.csv.gz` (20.625.983 bytes, SHA-256: `b17b99f9c421c566cc26a1c89a0b3d16b4c7f3dc74e659141900ccbac316b20e`), lưu nguồn gốc, thời điểm tải và giấy phép CC BY 4.0 tại `data/source_manifest.json`.
+- **Bản dữ liệu thực tế**: Đã nạp và kiểm toán thực nghiệm qua `src/data_audit.py`, kết quả lưu tại `reports/audit/bangkok_audit_summary.json` và `docs/DATA_AUDIT.md`. Các con số kích thước đã được xác thực: đúng **31.069 dòng × 90 cột**, đúng **31.069 ID duy nhất** (0 dòng trùng lặp ID) và đúng **28.987 dòng có giá hợp lệ** (2.082 dòng khuyết, tương đương 6,70%).
+- **Đơn vị quan sát**: **Listing snapshot** (mỗi dòng là một chỗ ở duy nhất tại thời điểm cào dữ liệu, không phải dữ liệu chuỗi thời gian calendar). Khoảng ngày `last_scraped` kéo dài 4 ngày: từ 2026-06-29 đến 2026-07-02 (2026-07-02: 13.286 dòng; 2026-06-29: 9.656; 2026-07-01: 5.372; 2026-06-30: 2.755).
+- **Giá mục tiêu đã xác minh**: Đơn vị tiền tệ chính thức là **Thái Baht (THB - ฿)**, và bản chất giá là **Báo giá theo đêm (price per night)**. Minh chứng: trường `price_quote_raw` chứa các mục dòng ghi rõ ký hiệu `฿`, và giá trị số của `price` khớp chính xác 100% (28.987/28.987 dòng) với `price_quote_price_per_night`. Ký hiệu `$` ở cột price là quy ước mặc định của scraper. Không suy diễn thành giá giao dịch thực tế hay doanh thu đã kiểm toán sổ sách.
+- **12 biến ứng viên đã kiểm tra sự hiện diện**: Cả 12 biến (`price`, `room_type`, `property_type`, `neighbourhood_cleansed`, `accommodates`, `bedrooms`, `bathrooms`, `beds`, `minimum_nights`, `number_of_reviews`, `review_scores_rating`, `host_is_superhost`) đều hiện diện trong bộ dữ liệu thực tế với chi tiết kiểu dữ liệu và tỷ lệ khuyết được ghi trong `reports/audit/bangkok_columns.csv`.
+- **Cột phụ trợ cần lưu ý**: Cột `price_quote_price_per_night` và `price_quote_total_price` làm lộ trực tiếp biến mục tiêu, tuyệt đối không đưa vào làm biến độc lập dự báo trong mô hình hồi quy. Không sử dụng `estimated_revenue_l365d` để dự đoán giá.
+- **Giới hạn triển khai**: Một thành phố (Bangkok), một bản listings snapshot; không mở rộng calendar, NLP, bản đồ tương tác GIS, hoặc so sánh nhiều thành phố. Có 7.935 chủ nhà quản lý 31.069 căn, chủ nhà lớn nhất sở hữu 247 căn $\rightarrow$ các quan sát không hoàn toàn độc lập, kiểm định thống kê mang tính khám phá (exploratory).
 
-Bốn RQ bên dưới là thiết kế dự kiến; cột biến phải đối chiếu dữ liệu thực và được nghiệm thu ở Bước 2.
+Bốn RQ bên dưới đã được đối chiếu với dữ liệu thực tế tại `docs/DATA_AUDIT.md` và xác nhận **có dữ liệu và kết quả EDA; điều kiện suy luận ANOVA chưa được xác nhận**:
 
 | Câu hỏi | Biến dự kiến, cần xác minh | Phương pháp và hình dự kiến | Giới hạn cần nêu |
 |---|---|---|---|
@@ -94,7 +94,7 @@ Bốn RQ bên dưới là thiết kế dự kiến; cột biến phải đối c
 | RQ4: Giá khác nhau thế nào giữa khu vực? | `neighbourhood_cleansed`, `price`, `room_type` | Groupby/pivot, boxplot/bar/heatmap; ANOVA khi phù hợp | So sánh thêm trong cùng loại phòng; không gọi nhóm ít mẫu là cao/thấp nhất thị trường |
 | Mô hình bổ trợ: Dự đoán báo giá tốt đến đâu? | Các biến được chọn hợp lệ từ tập ứng viên, không có thông tin giá gián tiếp | Linear Regression, Ridge, CV 4-fold, MSE/R² và residual/distribution plot (Bài 06–07) | Không dự báo doanh thu hay giá tương lai; không lấy R² cao làm điều kiện đạt |
 
-Đầu ra dự kiến Bước 1: `docs/DATA_AUDIT.md`, `src/data_audit.py` và `reports/audit/` tính từ gốc đồ án. Các tệp này chưa có; lệnh `python src/data_audit.py` chỉ sử dụng được sau khi triển khai. Chưa có kết quả Pearson/ANOVA, mô hình hay notebook phân tích.
+Đầu ra Bước 1 đã có: `docs/DATA_AUDIT.md`, `src/data_audit.py` và `reports/audit/`. Bước 3–4 đã có `docs/CLEANING_PLAN.md`, `src/wrangling.py`, baseline processed và notebook 01 chạy thành công. Bước 5–6 đã có notebook 02–03, bảng Pearson/ANOVA thăm dò, pivot, 5 hình 300 DPI và `reports/eda_findings.md`; Codex review/sửa ngày 11/10, minh chứng tại `reports/qa_review_step_05_06.md`. Bước 7 đã review và có benchmark/giải trình trong `reports/qa_review_step_07.md`; chưa xây hồi quy theo chính sách chọn biến hiện tại. Bước 8–9 đã có Word/PDF điền kết quả; Bước 10 có slide/kịch bản, còn tổng duyệt của nhóm.
 
 ---
 
@@ -104,7 +104,7 @@ Bốn RQ bên dưới là thiết kế dự kiến; cột biến phải đối c
 
 ### 2.1 Ràng buộc về Lược đồ (Zero-Assumption on Schema)
 
-- Schema Bangkok chưa được kiểm tra trong repo hiện tại. Bước 1 phải xuất danh mục cột thực tế, kiểu dữ liệu, missing và mô tả nguồn vào `reports/audit/bangkok_columns.csv`. Không cố định trước số cột; kiểm tra tên trường điểm đánh giá, chẳng hạn `review_scores_rating`, thay vì tự đặt tên `rating`.
+- Schema Bangkok đã được kiểm toán. Danh mục cột thực tế, kiểu dữ liệu, missing và mô tả nguồn lưu tại `reports/audit/bangkok_columns.csv`. Không cố định trước số cột; kiểm tra tên trường điểm đánh giá, chẳng hạn `review_scores_rating`, thay vì tự đặt tên `rating`.
 - Khi thay phiên bản dữ liệu, kiểm toán lại từ `df.info()`, `df.columns`, `df.dtypes`; không mang số liệu của phiên bản cũ hoặc con số chưa xác minh sang bản mới.
 - Nếu một cột không có tài liệu mô tả rõ ràng, bắt buộc ghi chú: *"Chưa đủ thông tin để xác định"* thay vì đoán mò ý nghĩa.
 
@@ -318,19 +318,19 @@ Dữ liệu thô (chỉ đọc)
 
 **Lịch và phân công chi tiết được theo dõi duy nhất tại [README — Hạn nộp và phân công từng chặng](../../../workspaces/final-project/README.md#ke-hoach-trien-khai)**: từng chặng có mốc ngày, người phụ trách, người kiểm tra chéo, đầu ra và trạng thái. Cả hai bản đặc tả dùng chung bảng này để tránh lệch tiến độ. Trước Bước 1, hoàn tất chuẩn bị tài liệu/lịch và môi trường Python; sau Bước 10, kiểm tra toàn bộ bộ nộp và lưu bằng chứng nộp thành công.
 
-Nhóm thực thi 10 bước dưới đây, bước sau kế thừa kết quả đã được nghiệm thu của bước trước. Tại ngày 10/10/2026, các bước thực nghiệm chưa triển khai; Bước 2 mới có RQ dự kiến:
+Nhóm thực thi 10 bước dưới đây, bước sau kế thừa kết quả đã được nghiệm thu của bước trước. Tại ngày 12/10/2026, Bước 1–9 hoàn tất phần kỹ thuật/nội dung; Bước 10 đã có slide và kịch bản nhưng chưa tổng duyệt. Hai thành viên chưa xác nhận kiểm tra chéo trên máy cá nhân. Sơ đồ dưới đây mô tả toàn bộ quy trình, trạng thái từng chặng theo README:
 
 ```text
-[Bước 1: Kiểm toán Dataset Bangkok & Xác minh Ngữ nghĩa Price] (CHƯA TRIỂN KHAI)
+[Bước 1: Kiểm toán Dataset Bangkok & Xác minh Ngữ nghĩa Price] (ĐÃ KIỂM TRA KỸ THUẬT)
     └── Kiểm tra số dòng/cột, schema, missing, duplicates; xác minh bản chất price & đơn vị quan trắc
            ↓
 [Bước 2: Xác lập Hệ Câu Hỏi Nghiên Cứu (Research Questions)]
     └── Bốn RQ và mô hình bổ trợ theo mục 1.5; điều chỉnh nếu chất lượng dữ liệu không đáp ứng
            ↓
-[Bước 3: Thiết Kế & Chốt Phương Án Làm Sạch Dữ Liệu (Data Cleaning)]
+[Bước 3: Phương Án Làm Sạch — docs/CLEANING_PLAN.md] (ĐÃ TRIỂN KHAI)
     └── Lập bảng giải trình 4 cột (Vấn đề -> Xử lý -> Lý do -> Ảnh hưởng), phân định 2 nhánh EDA vs Model
            ↓
-[Bước 4: Thực Thi Code Làm Sạch & Xuất Dataset Processed]
+[Bước 4: Code Làm Sạch & Dataset Processed] (ĐÃ CHẠY VÀ KIỂM TRA)
     └── Viết code sạch trong src/wrangling.py và notebook notebooks/01_data_audit_and_cleaning.ipynb
            ↓
 [Bước 5: Thực Hiện Phân Tích Thăm Dò (EDA) & Trực Quan Hóa Biến Trung Tâm]
@@ -356,20 +356,14 @@ Nhóm thực thi 10 bước dưới đây, bước sau kế thừa kết quả �
 
 ## 7. Giao Thức Nhiệm Vụ Đầu Tiên: Phiếu Kiểm Toán Dữ Liệu Thực Tế
 
-Bước 1 chưa triển khai. Cần thu thập bản Bangkok vào `workspaces/final-project/data/raw/`, tạo manifest nguồn và SHA-256, phiếu kiểm toán `docs/DATA_AUDIT.md`, script `src/data_audit.py` và số liệu máy đọc tại `reports/audit/`. Các đường dẫn sau đường dẫn dữ liệu được tính từ gốc đồ án. Chỉ nghiệm thu khi chạy lại được kiểm toán và có bằng chứng ngữ nghĩa giá; kiểm toán không đồng nghĩa đã làm sạch/EDA/mô hình. Khi đổi file đầu vào phải thực hiện lại các mục dưới đây trước khi viết kết quả cuối kỳ.
+Bước 1 đã được Claude Code triển khai và Codex review độc lập, sửa các điểm còn sót về manifest, báo cáo và bảo toàn raw. Bước 3–4 được Codex tiếp tục theo yêu cầu người dùng ngày 10/10/2026: `docs/CLEANING_PLAN.md`, `src/wrangling.py`, notebook 01 và baseline 28.987 dòng × 16 cột. Đã loại 2.082 dòng thiếu giá, giữ mọi giá dương và missing predictor. Bộ test đạt 46; notebook 01 đã chạy headless. Xem `reports/qa_review_step_01_04.md`. Hai thành viên vẫn cần chạy trên máy cá nhân; không ghi nhận kiểm tra chéo con người đã hoàn tất.
 
-### 7.1 Điều kiện tiên quyết: Xác minh ngữ nghĩa của `price` và Đơn vị quan trắc
+### 7.1 Điều kiện tiên quyết: Xác minh ngữ nghĩa của `price` và Đơn vị quan trắc (ĐÃ XÁC MINH)
 
-Bắt buộc xác định tiền tệ, bản chất giá và đơn vị quan sát trước khi tổng hợp giá. Phần thuế/phí chưa rõ phải ghi là chưa xác nhận, không tự quy thành 0; kết quả chỉ mô tả đúng trường giá quan sát:
-
-1. **Đơn vị tiền tệ chính xác**: Xác minh `price` trong file Bangkok có đơn vị THB hay đơn vị khác bằng tài liệu nguồn; không suy luận chỉ từ tên thành phố hoặc ký hiệu `$`. Kiểm tra dấu nhóm nghìn và dấu thập phân, giữ đơn vị gốc đã xác minh. Nếu có `price_quote_raw`, đối chiếu ký hiệu tiền tệ và lưu bằng chứng trong báo cáo kiểm toán.
-2. **Bản chất của giá niêm yết (Pricing Granularity)**:
-   - Giá tính theo đêm (`price per night`) hay theo tuần/tháng/cả kỳ lưu trú (`total stay`)?
-   - Giá đã bao gồm các phụ phí hay chưa (phí dọn dẹp `cleaning_fee`, phí dịch vụ `service_fee`, phụ thu thêm khách)?
-3. **Đơn vị quan sát của từng dòng (Unit of Observation)**:
-   - Mỗi dòng đại diện cho một chỗ ở duy nhất (Listing snapshot - ví dụ file `listings.csv` của Inside Airbnb)?
-   - Hay mỗi dòng đại diện cho một cặp chỗ ở - ngày lịch biểu (Listing-Date pair - ví dụ file `calendar.csv` của Inside Airbnb)?
-   - *Rủi ro nếu không xác định*: Nếu là dữ liệu listing-date (dạng calendar), việc xuất hiện nhiều dòng cùng `id` listing là hoàn toàn bình thường (mỗi dòng ứng với một ngày khác nhau trong năm). Nếu vội vàng xóa trùng lặp theo `id` sẽ làm mất dữ liệu lịch sử giá; nếu gộp tính trung bình mà không phân nhóm theo thời gian sẽ làm sai lệch phân bố giá. Ngược lại, nếu là listing snapshot, các dòng trùng `id` mới là duplicates cần xử lý.
+Đã hoàn thành xác minh dựa trên dữ liệu thực tế và lưu tại `data/source_manifest.json` và `docs/DATA_AUDIT.md`:
+1. **Đơn vị tiền tệ chính xác**: Đã xác minh là **Thái Baht (THB - ฿)** dựa trên 97/100 mẫu quote chứa ký hiệu `฿` trong `price_quote_raw` và khớp 100% với `price_quote_price_per_night`. Ký hiệu `$` ở cột price là định dạng tự động của scraper.
+2. **Bản chất của giá niêm yết (Pricing Granularity)**: Đã xác minh là **Báo giá theo đêm (price per night)**, đối chiếu với cột price_quote_price_per_night trên 28.987 cặp hữu hạn. Chưa xác minh đầy đủ thuế/phí cuối cùng.
+3. **Đơn vị quan sát của từng dòng (Unit of Observation)**: Đã xác minh là **Listing snapshot** (mỗi dòng đại diện cho một chỗ ở đơn lẻ, có đúng 31.069 dòng và 31.069 ID duy nhất, 0 dòng trùng ID). Thời điểm cào từ 2026-06-29 đến 2026-07-02. Không phải dữ liệu chuỗi thời gian calendar.
 
 ### 7.2 Mười một đầu mục kiểm toán chi tiết
 
@@ -392,79 +386,45 @@ Bắt buộc xác định tiền tệ, bản chất giá và đơn vị quan sá
 
 ---
 
-## 8. Kiến Trúc Lưu Trữ Sản Phẩm Dự Án (Dự Kiến Triển Khai)
+## 8. Kiến Trúc Lưu Trữ Sản Phẩm Dự Án
 
-Cấu trúc dự kiến tại `workspaces/final-project/` được liệt kê dưới đây. Hiện có README, đặc tả, hai template và bản khung `reports/Nhom10_Bao_cao.docx` cùng PDF xem trước `reports/Nhom10_Bao_cao_Khung.pdf` và hướng dẫn `reports/README.md`. Bản khung có Giới thiệu hai đoạn và các chỗ chờ dữ liệu/kết quả; chưa phải báo cáo hoàn chỉnh. Dữ liệu, mã nguồn, cấu hình môi trường, test, notebook và kết quả thực nghiệm trong cây đều chưa được tạo:
+Cấu trúc hiện hành tại `workspaces/final-project/`: `docs/` chứa đặc tả/template/phương pháp/runbook; `data/raw/` bất biến và `data/processed/` chứa baseline; `notebooks/01–04` đã chạy; `src/`, `tests/`, requirements và cấu hình đã có. `reports/` chứa kiểm toán/làm sạch/thống kê/hình/modeling, Word/PDF điền kết quả, 12 slide, kịch bản và hướng dẫn nộp. Cây thư mục và lịch cập nhật duy nhất tại [README](../../../workspaces/final-project/README.md).
 
-```text
-workspaces/final-project/
-├── README.md                           # Thông tin nhóm 10, tên đề tài và nhật ký tiến độ
-├── docs/                               # Tài liệu hướng dẫn & tài liệu thiết kế
-│   ├── SPECIFICATION.md                # Bản sao đặc tả thiết kế làm việc nội bộ
-│   ├── Template_IE313.docx             # Template báo cáo Word gốc
-│   ├── Slides.pptx                     # Template slide PowerPoint gốc
-│   ├── DATA_AUDIT.md                  # Dự kiến Bước 1: phiếu kiểm toán
-│   └── sources/                      # Dự kiến Bước 1: từ điển nguồn
-├── data/                               # Dữ liệu phân tích
-│   ├── raw/                            # Chứa dữ liệu gốc (BẤT BIẾN - READ ONLY)
-│   ├── processed/                      # Dữ liệu sạch: chưa thực hiện
-│   └── source_manifest.json            # URL, phiên bản, SHA-256, đơn vị và giới hạn
-├── notebooks/                          # Jupyter Notebooks thực nghiệm (chuẩn hóa tên file)
-│   ├── 01_data_audit_and_cleaning.ipynb # Kiểm toán và làm sạch dữ liệu
-│   ├── 02_eda_and_statistical_tests.ipynb # EDA, kiểm định Pearson và ANOVA
-│   ├── 03_visualization_figures.ipynb  # Sinh ảnh biểu đồ chất lượng cao 300 DPI
-│   └── 04_regression_modeling.ipynb    # Mô hình hồi quy bổ trợ và chẩn đoán
-├── src/                                # Mã nguồn tái sử dụng (chuẩn hóa tên file)
-│   ├── __init__.py
-│   ├── data_audit.py                   # Dự kiến Bước 1: kiểm toán chỉ đọc
-│   ├── data_loader.py                  # Module nạp và kiểm tra dữ liệu
-│   ├── wrangling.py                    # Module làm sạch và chuẩn hóa
-│   ├── eda_stats.py                    # Module tính toán thống kê và kiểm định
-│   └── visualization.py                # Module vẽ biểu đồ chuẩn Matplotlib OO API
-├── requirements.txt                    # Dự kiến bước chuẩn bị: thư viện
-├── requirements-dev.txt                # Pytest và Ruff
-├── tests/test_data_audit.py             # Test đọc giá, checksum và báo giá thiếu
-└── reports/                            # Kiểm toán và sản phẩm cuối kỳ dự kiến
-    ├── audit/                          # Dự kiến: JSON + schema/missing thực tế
-    ├── qa_audit_report.md               # Dự kiến: kiểm tra trước khi nộp
-    ├── figures/                        # Thư viện ảnh 300 DPI (chèn vào Word & Slide)
-    ├── Nhom10_Bao_cao.docx             # Đã có bản khung; chờ kết quả ở Bước 9
-    ├── Nhom10_Bao_cao_Khung.pdf       # Đã có PDF xem trước bản khung
-    ├── Nhom10_Bao_cao.pdf              # Báo cáo PDF xuất từ Word
-    ├── Nhom10_Slides.pptx              # Slide thuyết trình hoàn thiện
-    ├── Nhom10_Dataset.docx             # Link dataset > 50 MB; cần xác minh mốc trong template
-    └── Nhom10_Video.docx               # Link video > 60 MB (nếu học trực tuyến)
-```
+Bản khung Word trước khi điền nằm tại `reports/archive/Nhom10_Bao_cao_Khung_20261010.docx`; PDF khung lịch sử giữ tại `reports/Nhom10_Bao_cao_Khung.pdf`, không dùng làm bài nộp. Hai template của giảng viên giữ nguyên.
+
+`models/best_pipeline.joblib` và chẩn đoán hồi quy không được tạo cho Bangkok vì chưa có predictor theo chính sách hiện tại. `Nhom10_Dataset.docx` / `Nhom10_Video.docx` chỉ tạo khi thuộc điều kiện và có link thật; không đưa đường dẫn dự kiến thành sản phẩm đã hoàn tất.
 
 ---
 
 ## 9. Kiểm Tra Bám Sát Bài Học Trước Khi Nghiệm Thu
 
-Trạng thái ngày 10/10/2026: repo có tài liệu thiết kế, template và bản khung báo cáo Word; chưa có dữ liệu Airbnb, manifest, script/test kiểm toán, notebook hoặc kết quả thực nghiệm. Checklist chỉ đánh dấu nội dung có minh chứng; lịch và phân công nằm trong README:
+Trạng thái 12/10/2026: đã có dữ liệu sạch, EDA, 5 hình, benchmark/giải trình train–CV và bốn notebook đã thực thi. Word/PDF có đủ kết quả (8 trang thân), slide có 12 trang và ghi chú. Hai thành viên chưa xác nhận kiểm tra chéo trên máy cá nhân/tổng duyệt; chưa nộp bài. Lịch/phân công theo README:
 
-- [x] Hai bản đặc tả đồng bộ, README thống nhất tên đề tài, bốn RQ dự kiến và trạng thái chưa kiểm toán.
+- [x] Hai bản đặc tả đồng bộ, README thống nhất tên đề tài, bốn RQ và trạng thái đã kiểm toán/làm sạch/EDA/trực quan.
 - [x] Đã ghi hạn nộp 18/10/2026, lịch nội bộ, người phụ trách và người kiểm tra chéo từng chặng.
 - [ ] Đã xác nhận giờ/kênh nộp, lịch thuyết trình và các yêu cầu nộp còn chưa rõ.
-- [ ] Đã thiết lập môi trường tái lập cho hai thành viên.
-- [ ] Đã có nguồn Bangkok, phiên bản, checksum và phiếu kiểm toán có thể chạy lại.
-- [ ] Đã xác minh schema, đơn vị quan sát, tiền tệ và ý nghĩa `price` bằng dữ liệu thực.
+- [x] Đã thiết lập môi trường tái lập (`requirements.txt`, `requirements-dev.txt`, `pyproject.toml`, `.venv`) và hướng dẫn trong `docs/RUNBOOK.md`.
+- [x] Đã có nguồn Bangkok 29/06/2026, checksum SHA-256, manifest `data/source_manifest.json` và phiếu kiểm toán `docs/DATA_AUDIT.md` chạy lại được.
+- [x] Đã xác minh schema (31.069 dòng × 90 cột), đơn vị quan sát (Listing snapshot, 0 trùng lặp ID), tiền tệ (THB) và ý nghĩa `price` (báo giá theo đêm) bằng dữ liệu thực.
 
-- [ ] Mỗi phương pháp có bài học/trang PDF hoặc nhãn “Bổ sung kỹ thuật theo repository” / “Mở rộng ngoài bài học” với nguồn và lý do rõ ràng.
-- [ ] Notebook 01 thể hiện Bài 01–02: nhập/xuất, kiểm tra kiểu dữ liệu, xử lý khuyết/đơn vị; giải trình scaling/binning/dummy đã dùng hoặc chưa phù hợp.
-- [ ] Notebook 02 thể hiện Bài 05: thống kê mô tả, IQR, Pearson r–p, ANOVA F–p, groupby/pivot khi có biến phù hợp; không dùng ngôn ngữ nhân quả.
-- [ ] Notebook 03 thể hiện Bài 03–04: mỗi biểu đồ gắn RQ, quy trình 5 bước, nhãn/đơn vị/chú giải, OO API và ảnh 300 DPI; không thêm biểu đồ chỉ để đủ số lượng.
-- [ ] Notebook 04 thể hiện Bài 06–07: hồi quy tuyến tính, cân nhắc đa thức/Ridge, Pipeline, train/test, CV, MSE/R², nhận xét độ khớp và residual/distribution plot; nếu không thực hiện phải có lý do từ dữ liệu.
-- [ ] Không đưa biến tạo từ price hay kết quả chọn biến toàn bộ EDA vào mô hình; không dùng test để tinh chỉnh.
-- [ ] Báo cáo và slide ghi rõ phần tìm hiểu thêm/mở rộng; số liệu và hình phải truy được về notebook đã chạy.
-- [x] Đã tạo Word bản khung từ template, điền thông tin nhóm và Giới thiệu hai đoạn; các phần chưa xác nhận được đánh dấu chờ bổ sung.
-- [ ] Bộ báo cáo/slide cuối kỳ phân biệt đúng quy định của giảng viên với lựa chọn của nhóm.
+- [x] Mỗi phương pháp có bài học/trang PDF hoặc nhãn “Bổ sung kỹ thuật theo repository” / “Mở rộng ngoài bài học” với nguồn và lý do rõ ràng.
+- [x] Notebook 01 thể hiện Bài 01–02: nhập/xuất, kiểm tra kiểu dữ liệu, xử lý khuyết/đơn vị; giải trình scaling/binning/dummy đã dùng hoặc chưa phù hợp.
+- [x] Notebook 02 thể hiện Bài 05: thống kê mô tả, IQR, Pearson r–p, ANOVA F–p, groupby/pivot khi có biến phù hợp; không dùng ngôn ngữ nhân quả.
+- [x] Notebook 03 thể hiện Bài 03–04: mỗi biểu đồ gắn RQ, quy trình 5 bước, nhãn/đơn vị/chú giải, OO API và ảnh 300 DPI; không thêm biểu đồ chỉ để đủ số lượng.
+- [x] Notebook 04 thể hiện Bài 06–07: phân chia train/test 70/30, K-Fold CV 4 folds, chọn biến trong fold; giải trình chưa xây hồi quy theo chính sách hiện tại (không biến số qua |r|≥0,30 và p<0,05; điều kiện ANOVA làm bộ lọc chưa xác nhận); mốc DummyRegressor. Không kết luận dữ liệu không thể mô hình hóa.
+- [x] Không đưa biến tạo từ price hay kết quả chọn biến toàn bộ EDA vào mô hình; không dùng test để tinh chỉnh.
+- [x] Báo cáo và slide ghi rõ phần tìm hiểu thêm/mở rộng; số liệu và hình phải truy được về notebook đã chạy.
+- [x] Word/PDF đã điền kết quả thật, Giới thiệu hai đoạn có minh bạch được nhóm xác nhận, bảng biến 5 cột, nguồn và phân công; PDF có 8 trang phần thân.
+- [x] Bộ báo cáo/slide phân biệt đúng quy định của giảng viên với lựa chọn của nhóm.
 
 **Ghi nhận rà soát ngày 04/10/2026**: Đã đối chiếu đặc tả với 8 PDF và hai template cục bộ; thu hẹp phương pháp mặc định về nội dung môn học, bổ sung ánh xạ nguồn và phân loại phần tìm hiểu thêm. Đây là rà soát tài liệu thiết kế, chưa xác nhận schema Airbnb, kết quả thống kê hay chất lượng mô hình.
 
 **Ghi nhận thiết kế ngày 07/10/2026**: Chuyển sang Bangkok và bổ sung thiết kế xử lý rủi ro báo giá khác kỳ lưu trú, dữ liệu cùng chủ nhà, cột làm lộ mục tiêu, Pipeline số/phân loại và giới hạn thuế/phí. Ghi nhận cũ về việc đã kiểm toán và có script/test được đính chính ở lần rà soát dưới đây.
 
-**Đính chính ngày 10/10/2026**: Đối chiếu filesystem cho thấy chưa có dữ liệu Airbnb, nguồn/manifest, phiếu kiểm toán hoặc script/test trong repo. Các con số và ngữ nghĩa giá từng ghi là kết quả được chuyển về trạng thái chưa xác minh. Đồng bộ README và hai bản đặc tả, bổ sung hạn nộp 18/10/2026 và lịch phân công từng chặng; chưa có kết quả thực nghiệm. Tiếp đó đã tạo bản khung báo cáo Word từ template, gồm Giới thiệu hai đoạn và các mục chờ dữ liệu/kết quả; chưa nghiệm thu báo cáo cuối kỳ.
+**Ghi nhận ngày 10/10/2026**: Bước 1–4 hoàn tất kỹ thuật; nhật ký kiểm tra tại `reports/qa_review_step_01_04.md`. Hai bản đặc tả được đồng bộ; README là nguồn lịch/phân công. Bước tiếp theo là EDA và hình theo bốn RQ, chưa có kết luận Pearson/ANOVA hoặc mô hình.
 
----
+**Ghi nhận ngày 11/10/2026 (Bước 5–6)**: Codex đã review phần Claude triển khai Bước 5–6, sửa tính toán hình khi giới hạn trục, catalog, điều kiện ANOVA và diễn giải. Có 72 tests đạt, Ruff toàn thư mục đạt, notebook 01–03 chạy lại; raw giữ hash/mtime, baseline giữ hash. `docs/EDA_METHODS.md` ghi rõ Levene/qcut là phần mở rộng.
 
-*Bản đặc tả Bangkok cập nhật ngày 10/10/2026, kế thừa cấu trúc thiết kế từ ngày 03/10/2026.*
+**Ghi nhận Bước 7, chốt review 12/10/2026**: Claude Code bàn giao ban đầu 85 tests ngày 11/10. Codex review/sửa chẩn đoán ANOVA, nhánh huấn luyện khả thi, độ chính xác R² và notebook; chạy 91 tests, coverage 89,18%, notebook 04 kernel mới. Tái lập độc lập split/fold, r/p/n, group sizes và benchmark đạt. Kết quả Bangkok chưa có predictor theo chính sách hiện tại; không chứng minh dữ liệu không thể mô hình hóa. Minh chứng: `reports/qa_review_step_07.md`, `reports/qa_step_07_verification.json`.
+
+**Ghi nhận Bước 8–10 ngày 12/10/2026**: Đã điền Word/PDF theo template, 8 trang thân; Giới thiệu có hai đoạn và xác nhận không tham khảo code/dự án mẫu, không dùng đề tài/dữ liệu ở môn khác. Đã có 12 slide, ghi chú và kịch bản 10 + 5 phút; chưa tổng duyệt. Kiểm tra tổng hợp ở `reports/qa_audit_report.md`. Không tự xác nhận nhóm đã đọc, chạy trên máy cá nhân hay nộp bài.

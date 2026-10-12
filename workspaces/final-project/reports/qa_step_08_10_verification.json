@@ -1,0 +1,69 @@
+{
+  "review_date": "2026-10-12",
+  "verified_at_utc": "2026-10-12T00:44:39.546301+00:00",
+  "report_total_pages": 11,
+  "report_main_pages": 8,
+  "introduction_paragraphs": 2,
+  "introduction_height_points": 197.96,
+  "variable_table_columns": 5,
+  "variable_table_rows_excluding_header": 12,
+  "slides": 12,
+  "presentation_planned_seconds": 600,
+  "demo_planned_seconds": 300,
+  "report_stats_checked": true,
+  "no_text_outside_pdf_pages": true,
+  "raw_hash_and_mtime_unchanged": true,
+  "baseline_and_templates_unchanged": true,
+  "eda_artifacts_unchanged": true,
+  "specs_byte_identical": true,
+  "notebooks": {
+    "01_data_audit_and_cleaning.ipynb": {
+      "executed_code_cells": 5,
+      "errors": 0
+    },
+    "02_eda_and_statistical_tests.ipynb": {
+      "executed_code_cells": 7,
+      "errors": 0
+    },
+    "03_visualization_figures.ipynb": {
+      "executed_code_cells": 6,
+      "errors": 0
+    },
+    "04_regression_modeling.ipynb": {
+      "executed_code_cells": 5,
+      "errors": 0
+    }
+  },
+  "test_passed": 91,
+  "src_coverage_percent": 89.18338108882521,
+  "ruff_lint_and_format_passed": true,
+  "artifacts": {
+    "Nhom10_Bao_cao.docx": {
+      "bytes": 2129070,
+      "sha256": "d69fb821bcf4a2d205e8335e8066a13a02a68e6ef32f1a2caa3f13330e816432"
+    },
+    "Nhom10_Bao_cao.pdf": {
+      "bytes": 1081864,
+      "sha256": "1cbb33b1738aeea83cfd025ee529abf3d65d51900d84742ae80c2f3ded140053"
+    },
+    "Nhom10_Slides.pptx": {
+      "bytes": 1995067,
+      "sha256": "7e6a70a89bc22a488c44d3742832e65a0cd930161152a9441e39cd4ede56e15e"
+    },
+    "Nhom10_Slides.pdf": {
+      "bytes": 1233714,
+      "sha256": "483a660d5a1b60f7c31ad25d3f087e829332c36eb73394597272c12b1180e984"
+    },
+    "Nhom10_Kich_ban_thuyet_trinh.md": {
+      "bytes": 5569,
+      "sha256": "a0f9bb77cb3d9d65dc823295b6ab47d3722544fb294bf91e0b67c693d64cadee"
+    },
+    "Nhom10_Huong_dan_nop.md": {
+      "bytes": 3926,
+      "sha256": "2402ba9a737bf0d1396c1a8979f9b30864e441b0c58387153df5aa357f6ba65f"
+    }
+  },
+  "human_peer_review_confirmed": false,
+  "rehearsal_completed": false,
+  "submitted": false
+}

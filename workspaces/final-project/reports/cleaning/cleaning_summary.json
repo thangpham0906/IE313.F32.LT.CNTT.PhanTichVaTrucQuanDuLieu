@@ -1,0 +1,124 @@
+{
+  "rows_before": 31069,
+  "exact_duplicates_removed": 0,
+  "rows_after": 28987,
+  "rows_removed": 2082,
+  "excluded_by_reason": {
+    "missing_price": 2082,
+    "invalid_price_format": 0,
+    "nonpositive_price": 0
+  },
+  "predictor_changes": {
+    "accommodates": {
+      "invalid_observed_to_missing": 0,
+      "minimum_inclusive": 1,
+      "integer_required": true
+    },
+    "bedrooms": {
+      "invalid_observed_to_missing": 0,
+      "minimum_inclusive": 0,
+      "integer_required": true
+    },
+    "bathrooms": {
+      "invalid_observed_to_missing": 0,
+      "minimum_inclusive": 0,
+      "integer_required": false
+    },
+    "beds": {
+      "invalid_observed_to_missing": 0,
+      "minimum_inclusive": 0,
+      "integer_required": true
+    },
+    "minimum_nights": {
+      "invalid_observed_to_missing": 0,
+      "minimum_inclusive": 1,
+      "integer_required": true
+    },
+    "number_of_reviews": {
+      "invalid_observed_to_missing": 0,
+      "minimum_inclusive": 0,
+      "integer_required": true
+    },
+    "review_scores_rating": {
+      "invalid_observed_to_missing": 0,
+      "minimum_inclusive": 0,
+      "integer_required": false
+    },
+    "host_is_superhost": {
+      "invalid_observed_to_missing": 0
+    }
+  },
+  "missing_after": {
+    "id": 0,
+    "host_id": 0,
+    "last_scraped": 0,
+    "price": 0,
+    "room_type": 0,
+    "property_type": 0,
+    "neighbourhood_cleansed": 0,
+    "accommodates": 0,
+    "bedrooms": 3559,
+    "bathrooms": 2701,
+    "beds": 1270,
+    "minimum_nights": 2,
+    "number_of_reviews": 0,
+    "review_scores_rating": 9451,
+    "host_is_superhost": 0
+  },
+  "model_feature_allowlist": [
+    "room_type",
+    "property_type",
+    "neighbourhood_cleansed",
+    "accommodates",
+    "bedrooms",
+    "bathrooms",
+    "beds",
+    "minimum_nights",
+    "number_of_reviews",
+    "review_scores_rating",
+    "host_is_superhost"
+  ],
+  "context_only_columns": [
+    "id",
+    "host_id",
+    "last_scraped",
+    "price_raw"
+  ],
+  "target": "price",
+  "currency": "THB",
+  "price_min_retained": 1.0,
+  "price_max_retained": 1320255.0,
+  "imputation_applied": false,
+  "scaling_applied": false,
+  "feature_selection_applied": false,
+  "source_sha256": "b17b99f9c421c566cc26a1c89a0b3d16b4c7f3dc74e659141900ccbac316b20e",
+  "source_rows": 31069,
+  "outlier_review": {
+    "q1": 1041.4650000000001,
+    "q3": 2539.565,
+    "lower_bound": -1205.6849999999995,
+    "upper_bound": 4786.715,
+    "flagged_count": 2730,
+    "removed_count": 0,
+    "use": "EDA_ONLY"
+  },
+  "processed_sha256": "961a01ad225e35f989ec81f124925488e392baca2ef3800ff4028b4423d5f9a7",
+  "processed_columns": [
+    "id",
+    "host_id",
+    "last_scraped",
+    "price",
+    "room_type",
+    "property_type",
+    "neighbourhood_cleansed",
+    "accommodates",
+    "bedrooms",
+    "bathrooms",
+    "beds",
+    "minimum_nights",
+    "number_of_reviews",
+    "review_scores_rating",
+    "host_is_superhost",
+    "price_raw"
+  ]
+}

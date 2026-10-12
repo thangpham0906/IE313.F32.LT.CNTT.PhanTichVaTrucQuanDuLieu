@@ -1,0 +1,229 @@
+{
+  "review_date_local": "2026-10-11",
+  "verified_at_utc": "2026-10-11T14:38:02.677601+00:00",
+  "scope": "Bước 5–6, sau sửa của Codex",
+  "protected_files": {
+    "data/raw/bangkok_listings_2026-06-29.csv.gz": {
+      "sha256": "b17b99f9c421c566cc26a1c89a0b3d16b4c7f3dc74e659141900ccbac316b20e",
+      "mtime_ns": 1791612578936933598,
+      "sha256_unchanged": true,
+      "mtime_unchanged": true
+    },
+    "data/processed/bangkok_cleaned.csv": {
+      "sha256": "961a01ad225e35f989ec81f124925488e392baca2ef3800ff4028b4423d5f9a7",
+      "mtime_ns": 1791729191446962255,
+      "sha256_unchanged": true,
+      "mtime_unchanged": false
+    },
+    "docs/Template_IE313.docx": {
+      "sha256": "db95db92f23c7e8c683dfb5c5fb78dc43ffd29c97d0d41656eb2adea345f1274",
+      "mtime_ns": 1791007502473678290,
+      "sha256_unchanged": true,
+      "mtime_unchanged": true
+    },
+    "docs/Slides.pptx": {
+      "sha256": "21ab0b67209af65f40aa7e7f1239f54edb0543fec7f4d4b0841742318939c3fb",
+      "mtime_ns": 1791007502405678353,
+      "sha256_unchanged": true,
+      "mtime_unchanged": true
+    },
+    "reports/Nhom10_Bao_cao.docx": {
+      "sha256": "8d3b5107b6854fe091439c6dd9918ca8f9c99d729c961e1bcbd33e435720aa2f",
+      "mtime_ns": 1791611830853130401,
+      "sha256_unchanged": true,
+      "mtime_unchanged": true
+    },
+    "reports/Nhom10_Bao_cao_Khung.pdf": {
+      "sha256": "31d24d4afb9789961e6a866dd25164dde46819ae036092499d215d7b56d9544e",
+      "mtime_ns": 1791611857284784126,
+      "sha256_unchanged": true,
+      "mtime_unchanged": true
+    }
+  },
+  "raw_acquisition_reuse": "ALREADY_EXISTS_VERIFIED",
+  "eda_reproduction": {
+    "byte_identical_artifacts": [
+      "rq1_price_distribution.json",
+      "rq1_price_distribution.csv",
+      "rq2_room_type_stats.json",
+      "rq2_room_type_stats.csv",
+      "rq2_anova_condition_checks.json",
+      "rq3_size_correlation.json",
+      "rq3_size_correlation.csv",
+      "rq4_neighbourhood_pivot_median.csv",
+      "rq4_neighbourhood_pivot_count.csv",
+      "rq4_neighbourhood_pivot_iqr.csv",
+      "rq4_neighbourhood_summary.json",
+      "lesson02_wrangling_demo.json"
+    ],
+    "metadata_equal_except_utc_timestamp": true
+  },
+  "strict_json_files": [
+    "reports/stats/eda_metadata.json",
+    "reports/stats/lesson02_wrangling_demo.json",
+    "reports/stats/rq1_price_distribution.json",
+    "reports/stats/rq2_anova_condition_checks.json",
+    "reports/stats/rq2_room_type_stats.json",
+    "reports/stats/rq3_size_correlation.json",
+    "reports/stats/rq4_neighbourhood_summary.json",
+    "reports/figures/figures_catalog.json"
+  ],
+  "independent_statistics": {
+    "price_mean": 2955.9601666264184,
+    "price_median": 1592.0,
+    "iqr_outliers": 2730,
+    "histogram_zoom_n": 28210,
+    "histogram_outside_n": 777,
+    "box_above_8000": 1123,
+    "pearson_and_ols": {
+      "accommodates": {
+        "n": 28987,
+        "r": 0.10665856697073768,
+        "p": 4.267508388075424e-74,
+        "slope": 907.1935783338571,
+        "intercept": 149.4405496571344,
+        "displayed_points": 2974
+      },
+      "bedrooms": {
+        "n": 25428,
+        "r": 0.08805022322418485,
+        "p": 6.035804599253387e-45,
+        "slope": 1242.8530685315227,
+        "intercept": 1266.316788722996,
+        "displayed_points": 2962
+      },
+      "bathrooms": {
+        "n": 26286,
+        "r": 0.08405635005545858,
+        "p": 1.9766756822946416e-42,
+        "slope": 1454.6970206076796,
+        "intercept": 984.4948868290942,
+        "displayed_points": 2978
+      },
+      "beds": {
+        "n": 27717,
+        "r": 0.06880718365539232,
+        "p": 1.9016984430195836e-30,
+        "slope": 647.1463634833283,
+        "intercept": 1783.2014417335738,
+        "displayed_points": 2975
+      }
+    },
+    "heatmap_n": 23043
+  },
+  "figures": [
+    {
+      "file": "reports/figures/fig1_price_distribution.png",
+      "size_px": [
+        4800,
+        1800
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "sha256": "71804ffff1132cdb55d6ad8e93f8064e9b4b3a48d96ff02f04f93658f03c7a6b"
+    },
+    {
+      "file": "reports/figures/fig2_price_by_room_type.png",
+      "size_px": [
+        4800,
+        1800
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "sha256": "5e3f6af0ff62ddae5523a2d36069b68fceb0e43a6bdc20987bdf1bf0c4efd82f"
+    },
+    {
+      "file": "reports/figures/fig3_price_vs_size_scatter.png",
+      "size_px": [
+        4500,
+        3300
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "sha256": "a68da8f790b6c2a797276359a458a9553809243099b2f7b22c4933c4ecb2e06b"
+    },
+    {
+      "file": "reports/figures/fig4_price_by_neighbourhood_heatmap.png",
+      "size_px": [
+        3600,
+        3000
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "sha256": "22714f2be4b87defbf9d2fdb5e3a17d06dba568636de07796cb43b0444ead391"
+    },
+    {
+      "file": "reports/figures/fig4_price_top_neighbourhoods_bar.png",
+      "size_px": [
+        3900,
+        2700
+      ],
+      "dpi": [
+        299.9994,
+        299.9994
+      ],
+      "sha256": "97dbc724d64c33d1b0b0b6aa71463af7855ae57d4ae29189aa068f3d274318bf"
+    }
+  ],
+  "notebooks": [
+    {
+      "file": "notebooks/01_data_audit_and_cleaning.ipynb",
+      "executed_code_cells": 5,
+      "error_outputs": 0,
+      "sha256": "32f33d77f8a8b4b88a70d50cfb33eeb300601af42bc3886e5dbaa4996ba62314"
+    },
+    {
+      "file": "notebooks/02_eda_and_statistical_tests.ipynb",
+      "executed_code_cells": 7,
+      "error_outputs": 0,
+      "sha256": "3076f4e3d39eb361a640f0faf73a42463574134fd30af50eb46a4d35dabf85d2"
+    },
+    {
+      "file": "notebooks/03_visualization_figures.ipynb",
+      "executed_code_cells": 6,
+      "error_outputs": 0,
+      "sha256": "c5d5cb236e4ee2892b6edcc079d005744aa0adda7a0a3f773a297af20b0b15bd"
+    }
+  ],
+  "tests": {
+    "passed": 72,
+    "coverage_percent": 87.54980079681275,
+    "log": "reports/verification_step_05_06/pytest_coverage.log",
+    "coverage_scope": "pytest only; eda_report executed separately by notebook 03"
+  },
+  "lint": {
+    ".venv/bin/ruff check .": {
+      "exit_code": 0,
+      "stdout": "All checks passed!"
+    },
+    ".venv/bin/ruff format --check .": {
+      "exit_code": 0,
+      "stdout": "36 files already formatted"
+    }
+  },
+  "specifications_byte_identical": true,
+  "source_checksums": {
+    "src/__init__.py": "93e6d8dc0bafe98f5cacc8f158d6eaa1411721891b6a9960dd641f45019e5272",
+    "src/audit_markdown.py": "1cb746c8e18a88971cd26c83406c017eedd3d021d29552f079fb34369b78ef23",
+    "src/data_audit.py": "a852b868909b3fa8849e50e7c668c1ba5b737dc8e30341f6077609dc1933f6e4",
+    "src/data_loader.py": "386100c47100617bf7c5d079d682a76c41fda9049060a114dc5eb7d036b19ab3",
+    "src/eda_report.py": "be51bbcff918b03c4b9301bfc7414183457c5e0cdd6766327e40e512865a1776",
+    "src/eda_stats.py": "756354a9b9a2072d124657519a04016b1d204a4ccddd7926abb3177f64176e6c",
+    "src/visualization.py": "ec8c69863baf24177333917bc9f4ef27e8ee46c52eac22d742a9a7d3b5cba127",
+    "src/wrangling.py": "14489f2b06a6b5e66611546198cdc89cd8816ba0b8c6efb9a5766cdb10c04526"
+  },
+  "limitations": [
+    "Human peer review not confirmed",
+    "Word/PDF remains scaffold; EDA not yet inserted",
+    "Modeling not implemented; Step 07 handoff prepared",
+    "ANOVA/Pearson inference remains exploratory with host clustering"
+  ]
+}

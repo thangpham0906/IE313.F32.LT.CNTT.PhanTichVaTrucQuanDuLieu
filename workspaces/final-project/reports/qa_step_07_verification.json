@@ -1,0 +1,123 @@
+{
+  "review_date": "2026-10-11",
+  "verified_at_utc": "2026-10-11T15:15:43.890367+00:00",
+  "test_passed": 91,
+  "coverage_percent": 89.18338108882521,
+  "notebook04_executed_code_cells": 5,
+  "notebook_errors": 0,
+  "byte_identical_artifacts": [
+    "split_assignments.csv",
+    "feature_selection.json",
+    "model_comparison.csv",
+    "modeling_findings.md"
+  ],
+  "metadata_equal_except_timestamp": true,
+  "independent_split_and_fold_ids_match": true,
+  "independent_feature_checks_all_folds_match": true,
+  "test_mse_manual": 315021203.8296908,
+  "test_r2_manual": -1.4334218385370079e-05,
+  "protected_files": {
+    "data/raw/bangkok_listings_2026-06-29.csv.gz": {
+      "sha256": "b17b99f9c421c566cc26a1c89a0b3d16b4c7f3dc74e659141900ccbac316b20e",
+      "unchanged": true
+    },
+    "data/processed/bangkok_cleaned.csv": {
+      "sha256": "961a01ad225e35f989ec81f124925488e392baca2ef3800ff4028b4423d5f9a7",
+      "unchanged": true
+    },
+    "docs/Template_IE313.docx": {
+      "sha256": "db95db92f23c7e8c683dfb5c5fb78dc43ffd29c97d0d41656eb2adea345f1274",
+      "unchanged": true
+    },
+    "docs/Slides.pptx": {
+      "sha256": "21ab0b67209af65f40aa7e7f1239f54edb0543fec7f4d4b0841742318939c3fb",
+      "unchanged": true
+    },
+    "reports/Nhom10_Bao_cao_Khung.pdf": {
+      "sha256": "31d24d4afb9789961e6a866dd25164dde46819ae036092499d215d7b56d9544e",
+      "unchanged": true
+    },
+    "reports/figures/fig3_price_vs_size_scatter.png": {
+      "sha256": "a68da8f790b6c2a797276359a458a9553809243099b2f7b22c4933c4ecb2e06b",
+      "unchanged": true
+    },
+    "reports/figures/figures_catalog.csv": {
+      "sha256": "29cfafe687e2ae8261ed1176dbaa88d33dfedbf264e21475a4c000d2ee813402",
+      "unchanged": true
+    },
+    "reports/figures/fig4_price_by_neighbourhood_heatmap.png": {
+      "sha256": "22714f2be4b87defbf9d2fdb5e3a17d06dba568636de07796cb43b0444ead391",
+      "unchanged": true
+    },
+    "reports/figures/figures_catalog.json": {
+      "sha256": "c8c3ad29072b79ab90bdb4be8a11fd82d5dc456c80a715438aa5cac229e180d1",
+      "unchanged": true
+    },
+    "reports/figures/fig1_price_distribution.png": {
+      "sha256": "71804ffff1132cdb55d6ad8e93f8064e9b4b3a48d96ff02f04f93658f03c7a6b",
+      "unchanged": true
+    },
+    "reports/figures/fig4_price_top_neighbourhoods_bar.png": {
+      "sha256": "97dbc724d64c33d1b0b0b6aa71463af7855ae57d4ae29189aa068f3d274318bf",
+      "unchanged": true
+    },
+    "reports/figures/fig2_price_by_room_type.png": {
+      "sha256": "5e3f6af0ff62ddae5523a2d36069b68fceb0e43a6bdc20987bdf1bf0c4efd82f",
+      "unchanged": true
+    },
+    "reports/stats/rq2_room_type_stats.csv": {
+      "sha256": "e3ed289b749a1bed92f44fae11d8971d39b4ea88da10652c26719d553b650ba6",
+      "unchanged": true
+    },
+    "reports/stats/rq4_neighbourhood_summary.json": {
+      "sha256": "54048520cba57826fd006b808dbcb6f35097c618662c7affbc9d30994296d3a7",
+      "unchanged": true
+    },
+    "reports/stats/rq2_room_type_stats.json": {
+      "sha256": "cc6c8a8204302c754f8bb31f8af13073bd77e4ee0e8256d963092141e522cb9b",
+      "unchanged": true
+    },
+    "reports/stats/rq4_neighbourhood_pivot_median.csv": {
+      "sha256": "c9a14473647d0338e27e045303fa807104cb2a174fb2a8a81537e999dc09b500",
+      "unchanged": true
+    },
+    "reports/stats/rq1_price_distribution.csv": {
+      "sha256": "65f43065b44c379a30be4f11090afc8775d95673d8fe1f36ec7b450cb5ee642c",
+      "unchanged": true
+    },
+    "reports/stats/rq2_anova_condition_checks.json": {
+      "sha256": "b3d5170a4da5ce11329ed85e3f0d2f5127a3d5b5db422d77d1951eed74c1a66c",
+      "unchanged": true
+    },
+    "reports/stats/rq1_price_distribution.json": {
+      "sha256": "ff6e9fd8e10a91478988e6f396fdf15a6bf13252ba03ad663a7076f741cfa42e",
+      "unchanged": true
+    },
+    "reports/stats/rq3_size_correlation.csv": {
+      "sha256": "bdfbd2be5177b8194ca74616fb7dfd16292153395e55f1dfb63ab2e5fe10353c",
+      "unchanged": true
+    },
+    "reports/stats/rq4_neighbourhood_pivot_count.csv": {
+      "sha256": "e4d17d29ef52a4d5923cf664368f5209967e7491d236d7ead3d1743477c7296c",
+      "unchanged": true
+    },
+    "reports/stats/rq4_neighbourhood_pivot_iqr.csv": {
+      "sha256": "74204e0a0676371710779e0d11dc9e266303ccdf31af8b4ff85a5222dc596c53",
+      "unchanged": true
+    },
+    "reports/stats/rq3_size_correlation.json": {
+      "sha256": "8c0ca1f4ba8109a44780abe378fbced4024370ff6257160296d60c846081991f",
+      "unchanged": true
+    },
+    "reports/stats/lesson02_wrangling_demo.json": {
+      "sha256": "94152767036f493fde40bb25ea32be92762b8dea909c135a5b17797e5972c3f2",
+      "unchanged": true
+    },
+    "reports/stats/eda_metadata.json": {
+      "sha256": "4c02380b6cc71118ca2b8628492433c69784eee7d3847b422339b449772329e1",
+      "unchanged": true
+    }
+  },
+  "regression_feasible_under_current_policy": false,
+  "human_peer_review_confirmed": false
+}

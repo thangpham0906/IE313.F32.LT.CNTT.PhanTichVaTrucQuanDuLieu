@@ -1,0 +1,17 @@
+{
+  "verification_date": "2026-10-10",
+  "reviewer": "Codex",
+  "raw_sha256": "b17b99f9c421c566cc26a1c89a0b3d16b4c7f3dc74e659141900ccbac316b20e",
+  "raw_mtime_ns": 1791612578936933598,
+  "raw_preserved": true,
+  "audit_replay_json_equal_excluding_timestamp": true,
+  "audit_replay_csv_equal": true,
+  "cleaning_csv_and_json_replay_equal": true,
+  "processed_sha256": "961a01ad225e35f989ec81f124925488e392baca2ef3800ff4028b4423d5f9a7",
+  "processed_rows": 28987,
+  "processed_columns": 16,
+  "notebook_executed_code_cells": 5,
+  "notebook_error_outputs": 0,
+  "specifications_identical": true,
+  "tests_passed": 46
+}

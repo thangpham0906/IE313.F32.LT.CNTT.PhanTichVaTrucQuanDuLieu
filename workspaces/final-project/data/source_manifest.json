@@ -1,0 +1,68 @@
+{
+  "dataset_name": "Inside Airbnb Bangkok Detailed Listings",
+  "city": "Bangkok",
+  "country": "Thailand",
+  "release_date": "2026-06-29",
+  "source_page_url": "https://insideairbnb.com/get-the-data/",
+  "direct_download_url": "https://data.insideairbnb.com/thailand/central-thailand/bangkok/2026-06-29/data/listings.csv.gz",
+  "downloaded_filename": "bangkok_listings_2026-06-29.csv.gz",
+  "relative_path": "data/raw/bangkok_listings_2026-06-29.csv.gz",
+  "download_timestamp_utc": "2026-10-10T06:09:00Z",
+  "file_size_bytes": 20625983,
+  "file_size_human": "20.63 MB (19.67 MiB)",
+  "sha256": "b17b99f9c421c566cc26a1c89a0b3d16b4c7f3dc74e659141900ccbac316b20e",
+  "license": "Creative Commons Attribution 4.0 International License (CC BY 4.0)",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "attribution": "Data sourced from Inside Airbnb (http://insideairbnb.com/)",
+  "primary_source_references": {
+    "data_dictionary": {
+      "name": "Inside Airbnb Data Dictionary",
+      "version": "4.3",
+      "date_introduced": "August, 2022",
+      "url": "https://docs.google.com/spreadsheets/d/1iWCNJcSutYqpULSQHlNyGInUvHg2BoUGoNRIGa6Szc4/edit?usp=sharing",
+      "local_snapshot": "docs/sources/inside_airbnb_data_dictionary_v4.3.csv",
+      "price_definition": "daily price in local currency. NOTE: the $ sign is a technical artifact of the export, please ignore it"
+    },
+    "data_assumptions": {
+      "name": "Inside Airbnb Data Assumptions",
+      "url": "https://insideairbnb.com/data-assumptions/",
+      "key_notes": "Quan sát là snapshot tại thời điểm cào; vị trí địa lý bị làm nhiễu ngẫu nhiên trong bán kính 0 - 150m để bảo vệ quyền riêng tư của chủ nhà."
+    }
+  },
+  "unit_of_observation": {
+    "type": "Listing Snapshot",
+    "description": "Mỗi dòng đại diện cho một chỗ ở (listing) duy nhất tại thời điểm cào dữ liệu. Tập dữ liệu có đúng 31.069 dòng và 31.069 ID duy nhất (0 dòng trùng ID)."
+  },
+  "temporal_coverage": {
+    "scrape_dates": [
+      "2026-06-29",
+      "2026-06-30",
+      "2026-07-01",
+      "2026-07-02"
+    ],
+    "date_range": "2026-06-29 đến 2026-07-02",
+    "distribution": {
+      "2026-07-02": 13286,
+      "2026-06-29": 9656,
+      "2026-07-01": 5372,
+      "2026-06-30": 2755
+    }
+  },
+  "currency_verification": {
+    "status": "VERIFIED_THB",
+    "currency_code": "THB",
+    "currency_symbol": "฿",
+    "evidence": "Inside Airbnb Data Dictionary v4.3 nêu rõ 'price' là giá theo ngày bằng tiền tệ địa phương (local currency), ký hiệu '$' chỉ là dấu vết kỹ thuật khi xuất file. Trường 'price_quote_raw' chứa JSON với trường raw_price_line_items ghi rõ ký hiệu '฿' (Thai Baht). Cột 'price' khớp chính xác 100% (28.987/28.987 dòng, sai khác cực đại = 0.0) với trường 'price_quote_price_per_night'."
+  },
+  "pricing_granularity_verification": {
+    "status": "VERIFIED_PRICE_PER_NIGHT",
+    "granularity": "Báo giá theo đêm (price per night)",
+    "evidence": "Cột price sau parse khớp chính xác 28.987/28.987 cặp hữu hạn với price_quote_price_per_night; sai khác cực đại 0.0. Không suy diễn thành tổng tiền cả kỳ lưu trú."
+  },
+  "unconfirmed_limitations": [
+    "Dữ liệu phản ánh snapshot niêm yết công khai tại thời điểm cào, không phải giá giao dịch thực tế hay doanh thu được xác thực qua sổ sách.",
+    "Tọa độ địa lý (latitude, longitude) bị làm nhiễu ngẫu nhiên trong bán kính 0 - 150m theo chính sách bảo mật vị trí của Airbnb.",
+    "Chưa xác minh đầy đủ trường thuế/phí trong toàn bộ quote; chưa thể khẳng định giá niêm yết bao gồm mọi phụ phí cuối cùng.",
+    "3.430 chủ nhà (host) quản lý nhiều hơn 1 listing (chiếm 43,23% tổng số 7.935 chủ nhà); tồn tại các chủ nhà quản lý đến 247 listing, do đó các quan sát không hoàn toàn độc lập về mặt thống kê."
+  ]
+}

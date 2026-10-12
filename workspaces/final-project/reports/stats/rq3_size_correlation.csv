@@ -1,0 +1,5 @@
+feature,target,n_total,n_valid,n_missing,missing_pct,pearson_r,p_value,strength,status
+accommodates,price,28987,28987,0,0.0,0.1067,4.267508388075424e-74,Yếu (Weak),COMPUTED
+bedrooms,price,28987,25428,3559,12.28,0.0881,6.035804599253387e-45,Yếu (Weak),COMPUTED
+bathrooms,price,28987,26286,2701,9.32,0.0841,1.9766756822946416e-42,Yếu (Weak),COMPUTED
+beds,price,28987,27717,1270,4.38,0.0688,1.9016984430195836e-30,Yếu (Weak),COMPUTED

@@ -1,0 +1,2 @@
+n,min,max,mean,std,variance,cv_pct,median,mode,q1,q3,iqr,lower_bound,upper_bound,outliers_count,outliers_pct,skewness,kurtosis,status,moment_estimator
+28987,1.0,1320255.0,2955.96,19054.72,363082418.47,644.62,1592.0,1712.0,1041.47,2539.57,1498.1,-1205.68,4786.72,2730,9.42,52.3111,3094.3914,COMPUTED,skew/kurtosis bias=False; Fisher excess kurtosis; variance/std ddof=1
